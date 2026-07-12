@@ -8,13 +8,15 @@ public class NoteSpawner : MonoBehaviour
     public GameObject donPrefab, kaPrefab;
     public Transform hitBar, spawnPoint;
     public float noteTravelTime = 2.0f;
+    public RectTransform gamePanel;
 
     public List<NoteData> chart = new List<NoteData>();
     private int nextNoteIndex = 0;
 
+    public double startTime = 2.0;
+
     void Start()
     {
-        double startTime = 2.0;
         double interval = 0.4; 
         int noteCount = 60;
 
@@ -42,7 +44,7 @@ public class NoteSpawner : MonoBehaviour
     {
         Debug.Log("Spawning note: " + data.type + " at time " + data.time);
         var prefab = data.type == NoteType.Don ? donPrefab : kaPrefab;
-        var noteObj = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        var noteObj = Instantiate(prefab, spawnPoint.position, Quaternion.identity, gamePanel);
         noteObj.GetComponent<NoteMover>().Init(data.time, conductor, spawnPoint.position, hitBar.position, noteTravelTime);
     }
 

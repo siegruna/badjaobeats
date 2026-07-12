@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class NoteMover : MonoBehaviour
     private double travelTime;
     private Vector3 startPos, endPos;
     private RhythmConductor conductor;
+    public bool pressable = false;
+
+    public KeyCode keyToPress = KeyCode.A;
 
     public void Init(double hitTime, RhythmConductor conductor, Vector3 start, Vector3 end, float travelTime)
     {
@@ -24,7 +28,44 @@ public class NoteMover : MonoBehaviour
         double t = 1.0 - (hitTime - songTime) / travelTime;
         transform.position = Vector3.LerpUnclamped(startPos, endPos, (float)t);
 
-        if (songTime - hitTime > 0.2)
+        if (Input.GetKeyDown(keyToPress))
+        {
+            if (pressable)
+            {
+                double timeDifference = Math.Abs(songTime - hitTime);
+                if (timeDifference <= 0.1)
+                {
+                    Debug.Log("Perfect!");
+                }
+                else if (timeDifference <= 0.2)
+                {
+                    Debug.Log("Good!");
+                }
+                Destroy(gameObject);
+            }
+        }
+        else if (songTime - hitTime > 0.2)
+        {
+            Debug.Log("Miss!");
             Destroy(gameObject);
+        }   
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Activator")
+        {
+            pressable = true;
+            //Debug.Log("Note entered activator zone");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Activator")
+        {
+            pressable = false;
+            //Debug.Log("Note exited activator zone");
+        }
     }
 }
