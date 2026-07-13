@@ -15,10 +15,11 @@ MonoBehaviour:
   speakerName: Sigrune
   speakerPortrait: {fileID: 21300000, guid: 34a6733e1b2eda240a6e4219b9f8c1f0, type: 3}
   dialogueLines:
-  - Hello!
+  - Hello! My name is Sigrune.
   - This is a test for the dialogue system.
   typingSpeed: 0.01
   voiceSound: {fileID: 0}
   voicePitch: 1
   autoProgressLines: 0101
   autoProgressDelay: 1.5
+  beforeGame: 1

@@ -13,4 +13,5 @@ public class DialogueSO : ScriptableObject
     public float voicePitch = 1f;
     public bool[] autoProgressLines;
     public float autoProgressDelay = 1.5f;
+    public bool beforeGame = false;
 }

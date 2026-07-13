@@ -8,6 +8,7 @@ public class NoteSpawner : MonoBehaviour
     public GameObject donPrefab, kaPrefab;
     public Transform hitBar, spawnPoint;
     public float noteTravelTime = 2.0f;
+    public RectTransform noteParent;
 
     public TextAsset chartJson; // drag your .json file into this in the Inspector
 
@@ -15,7 +16,10 @@ public class NoteSpawner : MonoBehaviour
     public Dictionary<NoteData, GameObject> activeNoteObjects = new Dictionary<NoteData, GameObject>();
     private int nextNoteIndex = 0;
 
-    void Start()
+    [Header("Adjust this value for calibration")]
+    public double startTime = 2.0;
+
+    public void StartSpawner()
     {
         if (chartJson == null)
         {
@@ -49,9 +53,18 @@ public class NoteSpawner : MonoBehaviour
     void SpawnNote(NoteData data)
     {
         var prefab = data.GetNoteType() == NoteType.Don ? donPrefab : kaPrefab;
-        var noteObj = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        var noteObj = Instantiate(prefab, spawnPoint.position, Quaternion.identity, noteParent);
         Debug.Log($"Instantiated: {noteObj.name}, instanceID={noteObj.GetInstanceID()}, active={noteObj.activeInHierarchy}");
-        noteObj.GetComponent<NoteMover>().Init(data, conductor, spawnPoint.position, hitBar.position, noteTravelTime);
+
+        if (data == null)
+        {
+            Debug.Log("data is null");
+        }
+        else
+        {
+            Debug.Log("data is not null");
+        }
+            noteObj.GetComponent<NoteMover>().Init(data, conductor, spawnPoint.position, hitBar.position, noteTravelTime);
         activeNoteObjects[data] = noteObj;
     }
 

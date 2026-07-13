@@ -11,7 +11,7 @@ public class RhythmConductor : MonoBehaviour
     private double dspSongStartTime;
     private double secPerBeat;
 
-    void Start()
+    public void StartMusic()
     {
         secPerBeat = 60.0 / songBpm;
         dspSongStartTime = AudioSettings.dspTime + 1.0;

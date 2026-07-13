@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public Image portrait;
 
     private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
+    private bool isTyping;
 
     void Start()
     {
@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
     // Called whenever a dialogue needs to happen
     public void StartDialogue()
     {
-        isDialogueActive = true;
         dialogueIndex = 0;
 
         speakerName.SetText(dialogueData.speakerName);
@@ -86,8 +85,12 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         StopAllCoroutines();
-        isDialogueActive = false;
         speakerText.SetText("");
         dialoguePanel.SetActive(false);
+
+        if (dialogueData.beforeGame)
+        {
+            GameManager.Instance.StartGame();
+        }
     }
 }

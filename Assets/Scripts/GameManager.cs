@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
 
     private int currentCombo = 0;
 
+    public NoteSpawner noteSpawner;
+    public RhythmConductor rhythmConductor;
+
     public void Start()
     {
         Instance = this;
@@ -34,6 +37,12 @@ public class GameManager : MonoBehaviour
         perfectIndicator.gameObject.SetActive(false);
         goodIndicator.gameObject.SetActive(false);
         missIndicator.gameObject.SetActive(false);
+    }
+
+    public void StartGame()
+    {
+        noteSpawner.StartSpawner();
+        rhythmConductor.StartMusic();
     }
 
     public void PerfectHit()
