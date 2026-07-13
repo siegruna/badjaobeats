@@ -13,9 +13,9 @@ public class NoteMover : MonoBehaviour
 
     public KeyCode keyToPress = KeyCode.A;
 
-    public void Init(double hitTime, RhythmConductor conductor, Vector3 start, Vector3 end, float travelTime)
+    public void Init(NoteData data, RhythmConductor conductor, Vector3 start, Vector3 end, float travelTime)
     {
-        this.hitTime = hitTime;
+        this.hitTime = data.time; 
         this.conductor = conductor;
         this.startPos = start;
         this.endPos = end;
@@ -49,6 +49,24 @@ public class NoteMover : MonoBehaviour
             GameManager.Instance.NoteMissed();
             Destroy(gameObject);
         }   
+    }
+
+    public void DestroyNote()
+    {
+        StartCoroutine(PopAndDestroy());
+    }
+
+    IEnumerator PopAndDestroy()
+    {
+        float t = 0;
+        Vector3 startScale = transform.localScale;
+        while (t < 0.1f)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(startScale, startScale * 1.5f, t / 0.1f);
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

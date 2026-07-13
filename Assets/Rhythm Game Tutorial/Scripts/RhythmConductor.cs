@@ -5,19 +5,23 @@ using UnityEngine;
 public class RhythmConductor : MonoBehaviour
 {
     public AudioSource musicSource;
-    public double songBpm = 120;
+    public double songBpm = 120; // will be overwritten if a chart sets it
     public float firstBeatOffset = 0f;
 
     private double dspSongStartTime;
     private double secPerBeat;
 
-    public float startOffset = 1f;
-
     void Start()
     {
         secPerBeat = 60.0 / songBpm;
-        dspSongStartTime = AudioSettings.dspTime + startOffset;
+        dspSongStartTime = AudioSettings.dspTime + 1.0;
         musicSource.PlayScheduled(dspSongStartTime);
+    }
+
+    public void SetBpm(double bpm)
+    {
+        songBpm = bpm;
+        secPerBeat = 60.0 / songBpm;
     }
 
     public double SongPositionInSeconds()

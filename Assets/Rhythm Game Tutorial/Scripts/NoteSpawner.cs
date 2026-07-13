@@ -8,30 +8,35 @@ public class NoteSpawner : MonoBehaviour
     public GameObject donPrefab, kaPrefab;
     public Transform hitBar, spawnPoint;
     public float noteTravelTime = 2.0f;
-    public RectTransform gamePanel;
+
+    public TextAsset chartJson; // drag your .json file into this in the Inspector
 
     public List<NoteData> chart = new List<NoteData>();
+    public Dictionary<NoteData, GameObject> activeNoteObjects = new Dictionary<NoteData, GameObject>();
     private int nextNoteIndex = 0;
-
-    [Header("Adjust this value for calibration")]
-    public double startTime = 2.0;
 
     void Start()
     {
-        double interval = 0.4; 
-        int noteCount = 60;
-
-        for (int i = 0; i < noteCount; i++)
+        if (chartJson == null)
         {
-            NoteType type = (i % 3 == 0) ? NoteType.Ka : NoteType.Don; 
-            chart.Add(new NoteData { time = startTime + (i * interval), type = type });
+            Debug.LogError("No chart JSON assigned on NoteSpawner!");
+            return;
         }
 
+        ChartFile loadedChart = JsonUtility.FromJson<ChartFile>(chartJson.text);
+        chart = loadedChart.notes;
+
+        Debug.Log($"Loaded {chart.Count} notes, BPM: {loadedChart.bpm}");
     }
 
     void Update()
     {
         double songTime = conductor.SongPositionInSeconds();
+
+        if (nextNoteIndex < chart.Count)
+        {
+            Debug.Log($"songTime={songTime:F2}, next note time={chart[nextNoteIndex].time:F2}, diff={chart[nextNoteIndex].time - songTime:F2}");
+        }
 
         while (nextNoteIndex < chart.Count &&
                chart[nextNoteIndex].time - songTime <= noteTravelTime)
@@ -43,11 +48,19 @@ public class NoteSpawner : MonoBehaviour
 
     void SpawnNote(NoteData data)
     {
-        Debug.Log("Spawning note: " + data.type + " at time " + data.time);
-        var prefab = data.type == NoteType.Don ? donPrefab : kaPrefab;
-        var noteObj = Instantiate(prefab, spawnPoint.position, Quaternion.identity, gamePanel);
-        noteObj.GetComponent<NoteMover>().Init(data.time, conductor, spawnPoint.position, hitBar.position, noteTravelTime);
+        var prefab = data.GetNoteType() == NoteType.Don ? donPrefab : kaPrefab;
+        var noteObj = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        Debug.Log($"Instantiated: {noteObj.name}, instanceID={noteObj.GetInstanceID()}, active={noteObj.activeInHierarchy}");
+        noteObj.GetComponent<NoteMover>().Init(data, conductor, spawnPoint.position, hitBar.position, noteTravelTime);
+        activeNoteObjects[data] = noteObj;
     }
 
-
+    public void DestroyNoteVisual(NoteData data)
+    {
+        if (activeNoteObjects.TryGetValue(data, out GameObject obj))
+        {
+            obj.GetComponent<NoteMover>().DestroyNote();
+            activeNoteObjects.Remove(data);
+        }
+    }
 }

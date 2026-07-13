@@ -766,14 +766,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conductor: {fileID: 348971064}
-  donPrefab: {fileID: 3326284775654411679, guid: 88e1df02497290e49a152674902ab01c, type: 3}
-  kaPrefab: {fileID: 8395180017357875555, guid: 1fdea66e97ca15e43af5d0ec911a36a3, type: 3}
+  donPrefab: {fileID: 8217486468167494318, guid: 0542d22aad02772419bf122c843e10f9, type: 3}
+  kaPrefab: {fileID: 1901118432809376093, guid: 1a233c7dd2eb7e34eb2e0753f480342b, type: 3}
   hitBar: {fileID: 1580659002}
   spawnPoint: {fileID: 6391054}
   noteTravelTime: 3
-  gamePanel: {fileID: 409055390}
+  chartJson: {fileID: 4900000, guid: 400f90d2afb49854581ec71b9c2b854b, type: 3}
   chart: []
-  startTime: 0.2
 --- !u!1 &382817604
 GameObject:
   m_ObjectHideFlags: 0
