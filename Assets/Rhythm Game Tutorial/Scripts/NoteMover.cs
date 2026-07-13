@@ -35,18 +35,18 @@ public class NoteMover : MonoBehaviour
                 double timeDifference = Math.Abs(songTime - hitTime);
                 if (timeDifference <= 0.1)
                 {
-                    Debug.Log("Perfect!");
+                    GameManager.Instance.PerfectHit();
                 }
                 else if (timeDifference <= 0.2)
                 {
-                    Debug.Log("Good!");
+                    GameManager.Instance.GoodHit();
                 }
                 Destroy(gameObject);
             }
         }
         else if (songTime - hitTime > 0.2)
-        {
-            Debug.Log("Miss!");
+        {;
+            GameManager.Instance.NoteMissed();
             Destroy(gameObject);
         }   
     }

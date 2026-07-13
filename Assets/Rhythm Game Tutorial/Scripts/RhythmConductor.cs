@@ -11,10 +11,12 @@ public class RhythmConductor : MonoBehaviour
     private double dspSongStartTime;
     private double secPerBeat;
 
+    public float startOffset = 1f;
+
     void Start()
     {
         secPerBeat = 60.0 / songBpm;
-        dspSongStartTime = AudioSettings.dspTime + 1.0;
+        dspSongStartTime = AudioSettings.dspTime + startOffset;
         musicSource.PlayScheduled(dspSongStartTime);
     }
 

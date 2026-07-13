@@ -13,6 +13,7 @@ public class NoteSpawner : MonoBehaviour
     public List<NoteData> chart = new List<NoteData>();
     private int nextNoteIndex = 0;
 
+    [Header("Adjust this value for calibration")]
     public double startTime = 2.0;
 
     void Start()
