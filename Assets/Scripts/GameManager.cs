@@ -26,6 +26,13 @@ public class GameManager : MonoBehaviour
     public NoteSpawner noteSpawner;
     public RhythmConductor rhythmConductor;
 
+    public Image passengers;
+    public Sprite passengerState1;
+    public Sprite passengerState2;
+    public Sprite passengerState3;
+
+    public List<int> milestones = new List<int> { 1000, 2000};
+
     public void Start()
     {
         Instance = this;
@@ -45,18 +52,33 @@ public class GameManager : MonoBehaviour
         rhythmConductor.StartMusic();
     }
 
+    private void UpdateUI(Indicator indicator)
+    {
+        scoreText.text = "Score: " + currentScore.ToString();
+        comboText.text = "Combo: " + currentCombo.ToString();
+        multiplierText.text = "Multiplier: x" + currentMultiplier.ToString();
+
+        if (currentScore < milestones[0])
+        {
+            passengers.sprite = passengerState1;
+        } else if (currentScore < milestones[1])
+        {
+            passengers.sprite = passengerState2;
+        } else
+        {
+            passengers.sprite = passengerState3;
+        }
+
+        StartCoroutine(SpawnIndicator(indicator));
+    }
+
     public void PerfectHit()
     {
         currentScore += (int)Mathf.Round(20 * currentMultiplier);
         currentCombo += 1;
         currentMultiplier = Math.Min(Math.Max(currentCombo / 10f, 1), 2);
 
-        Debug.Log(currentMultiplier);
-
-        scoreText.text = "Score: " + currentScore.ToString();
-        comboText.text = "Combo: " + currentCombo.ToString();
-        multiplierText.text = "Multiplier: x" + currentMultiplier.ToString();
-        StartCoroutine(SpawnIndicator(Indicator.Perfect));
+        UpdateUI(Indicator.Perfect);
     }
 
     public void GoodHit()
@@ -65,20 +87,15 @@ public class GameManager : MonoBehaviour
         currentCombo += 1;
         currentMultiplier = Math.Min(Math.Max(currentCombo / 10f, 1), 2);
 
-        scoreText.text = "Score: " + currentScore.ToString();
-        comboText.text = "Combo: " + currentCombo.ToString();
-        multiplierText.text = "Multiplier: x" + currentMultiplier.ToString();
-        StartCoroutine(SpawnIndicator(Indicator.Good));
+        UpdateUI(Indicator.Good);
     }
 
     public void NoteMissed()
     {
         currentCombo = 0;
         currentMultiplier = 1;
-        StartCoroutine(SpawnIndicator(Indicator.Miss));
-
-        comboText.text = "Combo: " + currentCombo.ToString();
-        multiplierText.text = "Multiplier: x" + currentMultiplier.ToString();
+        
+        UpdateUI(Indicator.Miss);
     }
 
     IEnumerator SpawnIndicator(Indicator indicator)
