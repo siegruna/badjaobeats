@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
 
     public List<int> milestones = new List<int> { 1000, 2000};
 
+    [Header("Dialogue triggered at the end of a song based on the result (3 outcomes)")]
+    public DialogueSO[] dialogues;
+
     public void Start()
     {
         Instance = this;
@@ -48,8 +52,46 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        PlayerPrefs.SetString("MostRecent", SceneManager.GetActiveScene().name);
+
         noteSpawner.StartSpawner();
         rhythmConductor.StartMusic();
+    }
+
+    public void FinishGame()
+    {
+        Debug.Log("Music stopped playing.");
+        if (currentScore < milestones[0])
+        {
+            // Bad end
+            DialogueManager.Instance.dialogueData = dialogues[0];
+        } else if (currentScore < milestones[1])
+        {
+            // Begging sim
+            DialogueManager.Instance.dialogueData = dialogues[1];
+        } else
+        {
+            // Good end
+            DialogueManager.Instance.dialogueData = dialogues[2];
+
+            UnlockLevel();
+        }
+
+        DialogueManager.Instance.StartDialogue();
+    }
+
+    public void UnlockLevel()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "Level1")
+        {
+            PlayerPrefs.SetInt("Level2Unlocked", 1);
+        }
+        else if (currentScene == "Level2")
+        {
+            PlayerPrefs.SetInt("Level3Unlocked", 1);
+        }
     }
 
     private void UpdateUI(Indicator indicator)

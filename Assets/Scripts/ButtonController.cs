@@ -20,15 +20,16 @@ public class ButtonController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(keyToPress))
+        if (!DialogueManager.Instance.dialogueActive)
         {
-            hitBar.sprite = pressedImage;
-        }
-        else if (Input.GetKeyUp(keyToPress))
-        {
-            hitBar.sprite = defaultImage;
+            if (Input.GetKeyDown(keyToPress))
+            {
+                hitBar.sprite = pressedImage;
+            }
+            else if (Input.GetKeyUp(keyToPress))
+            {
+                hitBar.sprite = defaultImage;
+            }
         }
     }
-
-
 }
