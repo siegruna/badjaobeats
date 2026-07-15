@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Pleading", menuName = "Pleading")]
+[CreateAssetMenu(fileName = "PleadingSO", menuName = "ScriptableObjects/PleadingSO")]
 public class PleadingSO : ScriptableObject
 {
     [Header("Leave empty if this is not a destination node")]

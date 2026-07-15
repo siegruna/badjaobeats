@@ -7,9 +7,7 @@ using UnityEngine.UI;
 
 public class SelectScreen : MonoBehaviour
 {
-    public Sprite firstLevelSprite;
-    public Sprite secondLevelSprite;
-    public Sprite thirdLevelSprite;
+    public List<Sprite> levelSprites;
     //public Image lockedIcon;
 
     public int selectedSongIndex = 0;
@@ -20,24 +18,13 @@ public class SelectScreen : MonoBehaviour
         PlayerPrefs.SetInt("Mode", 1);
 
         StartCoroutine(ScreenFader.Instance.FadeIn());
-        selectButton.GetComponent<Image>().sprite = firstLevelSprite;
+        selectButton.GetComponent<Image>().sprite = levelSprites[0];
     }
 
     public void SelectSong()
     {
-        if (selectedSongIndex == 0)
-        {
-            StartCoroutine(ScreenFader.Instance.FadeOut("Level1"));
-        }
-        else if (selectedSongIndex == 1)
-        {
-            StartCoroutine(ScreenFader.Instance.FadeOut("Level2"));
-        }
-        else
-        {
-
-            StartCoroutine(ScreenFader.Instance.FadeOut("Level3"));
-        }
+        string levelName = "Level" + (selectedSongIndex + 1);
+        StartCoroutine (ScreenFader.Instance.FadeOut(levelName));
     }
 
     public void PreviousSong()
@@ -51,7 +38,7 @@ public class SelectScreen : MonoBehaviour
 
     public void NextSong()
     {
-        if (selectedSongIndex <= 2)
+        if (selectedSongIndex < levelSprites.Count - 1)
         {
             selectedSongIndex++;
             UpdateUI();
@@ -65,17 +52,6 @@ public class SelectScreen : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (selectedSongIndex == 0)
-        {
-            selectButton.gameObject.GetComponent<Image>().sprite = firstLevelSprite;
-        }
-        else if (selectedSongIndex == 1)
-        {
-            selectButton.gameObject.GetComponent<Image>().sprite = secondLevelSprite;
-        }
-        else if (selectedSongIndex == 2)
-        {
-            selectButton.gameObject.GetComponent<Image>().sprite = thirdLevelSprite;
-        }
+        selectButton.gameObject.GetComponent<Image>().sprite = levelSprites[selectedSongIndex];
     }
 }

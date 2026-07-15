@@ -373,9 +373,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237777dcad82336459065e35fd1c7f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevelSprite: {fileID: 21300000, guid: f62dc5578e0fa9b47bd624def3e17f7f, type: 3}
-  secondLevelSprite: {fileID: 21300000, guid: c3c13b1f8baa5dd4a86d3dc186668178, type: 3}
-  thirdLevelSprite: {fileID: 21300000, guid: 1bbda9210988dfd4db252a09838d254f, type: 3}
+  levelSprites:
+  - {fileID: 21300000, guid: f62dc5578e0fa9b47bd624def3e17f7f, type: 3}
+  - {fileID: 21300000, guid: b0841684710188c46a60a15e7e2ceb95, type: 3}
+  - {fileID: 21300000, guid: 1f7f6450eef441043bdf9cefa370b870, type: 3}
+  - {fileID: 21300000, guid: c46d5e1e2f74be842b05123113127383, type: 3}
   selectedSongIndex: 0
   selectButton: {fileID: 1668061175}
 --- !u!1 &679190097

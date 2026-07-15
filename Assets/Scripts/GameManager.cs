@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int currentScore;
     public float currentMultiplier = 1;
     public int scorePerNote = 10;
+    private int missCount = 0;
 
     public TMP_Text scoreText;
     public TMP_Text comboText;
@@ -27,15 +28,23 @@ public class GameManager : MonoBehaviour
     public NoteSpawner noteSpawner;
     public RhythmConductor rhythmConductor;
 
-    public Image passengers;
-    public Sprite passengerState1;
-    public Sprite passengerState2;
-    public Sprite passengerState3;
+    // Passenger Stuff
+    public Image passenger1;
+    public Image passenger2;
+    private int passenger1Index, passenger2Index;
 
-    public List<int> milestones = new List<int> { 1000, 2000};
+    public List<PassengerSO> availablePassengers;
+
+    public List<int> milestones = new List<int> { 1000, 2000 };
 
     [Header("Dialogue triggered at the end of a song based on the result (3 outcomes)")]
     public DialogueSO[] dialogues;
+
+    [SerializeField] RectTransform jeepney;
+    private Vector2 startPos;
+
+    public float speed = 2f;
+    public float height = 2f;
 
     public void Start()
     {
@@ -44,12 +53,42 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: 0";
         comboText.text = "Combo: 0";
         multiplierText.text = "Multiplier: x1";
-        
+
         perfectIndicator.gameObject.SetActive(false);
         goodIndicator.gameObject.SetActive(false);
         missIndicator.gameObject.SetActive(false);
 
+        startPos = jeepney.anchoredPosition;
+
+        // Select 2 passengers
+        passenger1Index = UnityEngine.Random.Range(0, availablePassengers.Count);
+        passenger2Index = UnityEngine.Random.Range(0, availablePassengers.Count);
+
+        if (passenger2Index == passenger1Index)
+        {
+            passenger2Index = (passenger2Index + 1) % availablePassengers.Count;
+        }
+
+        // Check for static characters
+        if ((availablePassengers[passenger1Index].isStatic && availablePassengers[passenger1Index].position != 0) || 
+            (availablePassengers[passenger2Index].isStatic && availablePassengers[passenger2Index].position != 1))
+        {
+            int temp = passenger2Index;
+            passenger2Index = passenger1Index;
+            passenger1Index = temp;
+            
+        }
+
+        passenger1.sprite = availablePassengers[passenger1Index].expressions[1];
+        passenger2.sprite = availablePassengers[passenger2Index].expressions[1];
+
         StartCoroutine(Initialize());
+    }
+
+    private void Update()
+    {
+        float newY = startPos.y + (Mathf.Sin(Time.time * speed) * height);
+        jeepney.anchoredPosition = new Vector2 (startPos.x, newY);
     }
 
     private IEnumerator Initialize()
@@ -120,15 +159,22 @@ public class GameManager : MonoBehaviour
         comboText.text = "Combo: " + currentCombo.ToString();
         multiplierText.text = "Multiplier: x" + currentMultiplier.ToString();
 
-        if (currentScore < milestones[0])
+        // todo: support 2 passengers and randomize them
+
+        if (currentScore < milestones[0] && missCount >= 10)
         {
-            passengers.sprite = passengerState1;
-        } else if (currentScore < milestones[1])
+            passenger1.sprite = availablePassengers[passenger1Index].expressions[2];
+            passenger2.sprite = availablePassengers[passenger2Index].expressions[2];
+        }
+        else if (currentScore < milestones[1])
         {
-            passengers.sprite = passengerState2;
-        } else
+            passenger1.sprite = availablePassengers[passenger1Index].expressions[1];
+            passenger2.sprite = availablePassengers[passenger2Index].expressions[1];
+        }
+        else
         {
-            passengers.sprite = passengerState3;
+            passenger1.sprite = availablePassengers[passenger1Index].expressions[0];
+            passenger2.sprite = availablePassengers[passenger2Index].expressions[0];
         }
 
         StartCoroutine(SpawnIndicator(indicator));
@@ -156,6 +202,7 @@ public class GameManager : MonoBehaviour
     {
         currentCombo = 0;
         currentMultiplier = 1;
+        missCount += 1;
         
         UpdateUI(Indicator.Miss);
     }
