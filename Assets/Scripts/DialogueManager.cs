@@ -19,14 +19,15 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueActive = false;
 
+    private void Awake()
+    {
+        dialoguePanel.SetActive(false);
+    }
     void Start()
     {
         if (Instance == null)
         {
             Instance = this;
-
-            // testing for dialogue
-            StartDialogue();
         }
         else
         {
@@ -92,7 +93,6 @@ public class DialogueManager : MonoBehaviour
         {
             GameManager.Instance.StartGame();
             dialogueActive = false;
-            StartCoroutine(ScreenFader.Instance.FadeOut());
         }
         else if (dialogueData.dialogueType == DialogueType.BadResult)
         {
@@ -104,6 +104,7 @@ public class DialogueManager : MonoBehaviour
         {
             // Begging simulator T_T 
             // Depending on the result, either present bad ending or proceed to next stage (make this a new scene or something i guess).
+            StartCoroutine(ScreenFader.Instance.FadeOut("PleadingScreen"));
         }
         else
         {

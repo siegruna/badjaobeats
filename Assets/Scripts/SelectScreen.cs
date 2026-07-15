@@ -12,29 +12,31 @@ public class SelectScreen : MonoBehaviour
     public Sprite thirdLevelSprite;
     //public Image lockedIcon;
 
-    // placeholder
-    public TMP_Text levelName;
-
     public int selectedSongIndex = 0;
     public Button selectButton;
     void Start()
     {
-        levelName.text = "Tutorial";
+        // 1 means Freeplay
+        PlayerPrefs.SetInt("Mode", 1);
+
+        StartCoroutine(ScreenFader.Instance.FadeIn());
+        selectButton.GetComponent<Image>().sprite = firstLevelSprite;
     }
 
     public void SelectSong()
     {
         if (selectedSongIndex == 0)
         {
-            SceneManager.LoadSceneAsync("Level1");
+            StartCoroutine(ScreenFader.Instance.FadeOut("Level1"));
         }
         else if (selectedSongIndex == 1)
         {
-            SceneManager.LoadSceneAsync("Level2");
+            StartCoroutine(ScreenFader.Instance.FadeOut("Level2"));
         }
         else
         {
-            SceneManager.LoadSceneAsync("Level3");
+
+            StartCoroutine(ScreenFader.Instance.FadeOut("Level3"));
         }
     }
 
@@ -56,46 +58,24 @@ public class SelectScreen : MonoBehaviour
         }
     }
 
+    public void BackButton()
+    {
+        StartCoroutine(ScreenFader.Instance.FadeOut("ModeScreen"));
+    }
+
     private void UpdateUI()
     {
         if (selectedSongIndex == 0)
         {
-            levelName.text = "Tutorial";
             selectButton.gameObject.GetComponent<Image>().sprite = firstLevelSprite;
-            selectButton.interactable = true;
-            //lockedIcon.enabled = false;
         }
         else if (selectedSongIndex == 1)
         {
-            levelName.text = "Level 2";
             selectButton.gameObject.GetComponent<Image>().sprite = secondLevelSprite;
-
-            if (PlayerPrefs.GetInt("Level2Unlocked", 0) == 1)
-            {
-                selectButton.interactable = true;
-                //lockedIcon.enabled = false;
-            }
-            else
-            {
-                selectButton.interactable = false;
-                //lockedIcon.enabled = true;
-            }
         }
         else if (selectedSongIndex == 2)
         {
-            levelName.text = "Level 3";
             selectButton.gameObject.GetComponent<Image>().sprite = thirdLevelSprite;
-
-            if (PlayerPrefs.GetInt("Level3Unlocked", 0) == 1)
-            {
-                selectButton.interactable = true;
-                //lockedIcon.enabled = false;
-            }
-            else
-            {
-                selectButton.interactable = false;
-                //lockedIcon.enabled = true;
-            }
         }
     }
 }

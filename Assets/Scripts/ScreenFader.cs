@@ -36,10 +36,10 @@ public class ScreenFader : MonoBehaviour
         canvasGroup.alpha = targetAlpha;
     }
 
-    public IEnumerator FadeOut()
+    public IEnumerator FadeOut(string sceneName = "Ending")
     {
         yield return Fade(1);
-        SceneManager.LoadSceneAsync("Ending");
+        SceneManager.LoadSceneAsync(sceneName);
     }
 
     public IEnumerator FadeIn()

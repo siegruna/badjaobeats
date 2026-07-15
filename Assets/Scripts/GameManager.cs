@@ -48,6 +48,22 @@ public class GameManager : MonoBehaviour
         perfectIndicator.gameObject.SetActive(false);
         goodIndicator.gameObject.SetActive(false);
         missIndicator.gameObject.SetActive(false);
+
+        StartCoroutine(Initialize());
+    }
+
+    private IEnumerator Initialize()
+    {
+        yield return ScreenFader.Instance.FadeIn();
+
+        if (PlayerPrefs.GetInt("Mode", 0) == 0)
+        {
+            DialogueManager.Instance.StartDialogue();
+        }
+        else
+        {
+            StartGame();
+        }
     }
 
     public void StartGame()
@@ -77,7 +93,11 @@ public class GameManager : MonoBehaviour
             UnlockLevel();
         }
 
-        DialogueManager.Instance.StartDialogue();
+        // Only start dialogue if in story mode.
+        if (PlayerPrefs.GetInt("Mode", 0) == 0)
+        {
+            DialogueManager.Instance.StartDialogue();
+        }
     }
 
     public void UnlockLevel()

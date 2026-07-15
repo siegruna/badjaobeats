@@ -20,4 +20,4 @@ MonoBehaviour:
     voicePitch: 0
   typingSpeed: 0.05
   autoProgressDelay: 1.5
-  dialogueType: 0
+  dialogueType: 2
