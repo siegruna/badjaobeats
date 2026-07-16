@@ -22,7 +22,17 @@ MonoBehaviour:
   - choiceText: Humihingi lang po ako sainyo nang kaunting tulong para sa pamilya
       ko, wala po kasi kami makain
     nextNodeID: amogus
+    isRandom: 0
+    randomNodeID: 
     ending: 
   - choiceText: Penge naman po ng tulong niyo oh
     nextNodeID: sus
+    isRandom: 0
+    randomNodeID: 
+    ending: 
+  - choiceText: Maraming salamat po sa pakikinig po sa musika ko. Mag ingat po kayo
+      sa byahe
+    nextNodeID: amogus
+    isRandom: 1
+    randomNodeID: yessir
     ending: 

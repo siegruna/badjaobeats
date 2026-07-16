@@ -375,6 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freeplayButton: {fileID: 1711165477}
+  audioSource: {fileID: 848582560}
+  squeakSounds: {fileID: 8300000, guid: 7192dc0fbef082e44b819f8b23a07a94, type: 3}
 --- !u!1 &612295029
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,11 +496,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7192dc0fbef082e44b819f8b23a07a94, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 1a49a8499cba1054aa63aeec486a5560, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

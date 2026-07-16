@@ -17,14 +17,6 @@ public class PleadingScreen : MonoBehaviour
     [SerializeField]
     private GameObject choiceButtonPrefab;
 
-    // Sprites for art
-    [SerializeField]
-    private Sprite sprite1;
-    [SerializeField]
-    private Sprite sprite2;
-    [SerializeField]
-    private Sprite sprite3;
-
     [Header("Event Nodes")]
     [SerializeField] private List<PleadingSO> eventNodes = new List<PleadingSO>();
 
@@ -95,8 +87,18 @@ public class PleadingScreen : MonoBehaviour
             return;
         }
 
+        if (eventNodes[currentNodeIndex].choices[0].isRandom)
+        {
+            int r = UnityEngine.Random.Range(0, 2);
+            if (r > 0)
+            {
+                eventNodes[currentNodeIndex].choices[0].nextNodeID = eventNodes[currentNodeIndex].choices[0].randomNodeID;
+            }
+        }
+
         foreach (PleadingSO node in eventNodes)
         {
+
             if (node.nodeID == eventNodes[currentNodeIndex].choices[0].nextNodeID)
             {
                 currentNodeIndex = eventNodes.IndexOf(node);
@@ -115,7 +117,17 @@ public class PleadingScreen : MonoBehaviour
         {
             return;
         }
-        
+
+
+        if (eventNodes[currentNodeIndex].choices[1].isRandom)
+        {
+            int r = UnityEngine.Random.Range(0, 2);
+            if (r > 0)
+            {
+                eventNodes[currentNodeIndex].choices[1].nextNodeID = eventNodes[currentNodeIndex].choices[1].randomNodeID;
+            }
+        }
+
 
         foreach (PleadingSO node in eventNodes)
         {
@@ -137,6 +149,16 @@ public class PleadingScreen : MonoBehaviour
         if (hasEnding)
         {
             return;
+        }
+
+
+        if (eventNodes[currentNodeIndex].choices[2].isRandom)
+        {
+            int r = UnityEngine.Random.Range(0, 2);
+            if (r > 0)
+            {
+                eventNodes[currentNodeIndex].choices[2].nextNodeID = eventNodes[currentNodeIndex].choices[2].randomNodeID;
+            }
         }
 
         foreach (PleadingSO node in eventNodes)

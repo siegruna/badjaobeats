@@ -368,7 +368,7 @@ PrefabInstance:
     - target: {fileID: 8192027033648253331, guid: 0b66cc4662ed73943a62894dcf6603a8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 619d92e36184fbb42844a83ef559facb, type: 3}
+      objectReference: {fileID: 8300000, guid: 1574be4370d083844b4cc8e54191309a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -503,15 +503,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f33a4eb7b9507c243b295f19dfaec1f5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -958,9 +958,9 @@ MonoBehaviour:
   kaPrefab: {fileID: 7996859114693807801, guid: 88e1df02497290e49a152674902ab01c, type: 3}
   hitBar: {fileID: 945942526}
   spawnPoint: {fileID: 6391054}
-  noteTravelTime: 2
+  noteTravelTime: 1.5
   noteParent: {fileID: 409055390}
-  chartJson: {fileID: 4900000, guid: d026abf122cf6724895eac74d69763ea, type: 3}
+  chartJson: {fileID: 4900000, guid: ea9740b54ae3ae0498fde32153474ee0, type: 3}
   chart: []
   startTime: 0
 --- !u!1 &382817604
@@ -3336,13 +3336,14 @@ MonoBehaviour:
   availablePassengers:
   - {fileID: 11400000, guid: ab7155120e72f2f408e2045a76bc0ca9, type: 2}
   - {fileID: 11400000, guid: eb88c6a6b27e0174985cec8a289340c3, type: 2}
-  - {fileID: 11400000, guid: 24e05853c81177f449f21df3bfb0e6b4, type: 2}
   - {fileID: 11400000, guid: 758dc1df29f606b46a82372d8e659f8d, type: 2}
+  - {fileID: 11400000, guid: 77ddcf65ab1cc8f4188bd20b257ad1d6, type: 2}
+  - {fileID: 11400000, guid: db32dd986225f8544b635d1d162f15d4, type: 2}
   milestones: e8030000d0070000
   dialogues:
   - {fileID: 11400000, guid: 23faa7ec5a5dd974fb5468e657067b10, type: 2}
   - {fileID: 11400000, guid: fe7d6213bba779048a6736c4aef43df3, type: 2}
-  - {fileID: 11400000, guid: 69bff48123acdeb48ba48af950727963, type: 2}
+  - {fileID: 11400000, guid: 4a22646e725226b4fb9bb21c290184e0, type: 2}
   jeepney: {fileID: 115240543}
   speed: 2
   height: 2
@@ -3920,6 +3921,7 @@ MonoBehaviour:
   speakerName: {fileID: 477198614}
   portrait: {fileID: 1432527861}
   dialogueActive: 0
+  audioSource: {fileID: 0}
 --- !u!1 &2052768344
 GameObject:
   m_ObjectHideFlags: 0

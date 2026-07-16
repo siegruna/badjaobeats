@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour
             unselectedPassengers.Add(i);
         }
 
-
         List<bool> occupiedSeats = new List<bool>();
         for (int i = 0; i < 3; i++)
         {
@@ -102,7 +101,8 @@ public class GameManager : MonoBehaviour
                 }
 
                 occupiedSeats[position] = true;
-                unselectedPassengers.Remove(position);
+                unselectedPassengers.Remove(i);
+                
                 break;
             }
         }
@@ -259,7 +259,7 @@ public class GameManager : MonoBehaviour
 
     public void NoteMissed()
     {
-        currentScore = Math.Max(currentScore - 10, 0);
+        currentScore = Math.Max(currentScore - 20, 0);
         currentCombo = 0;
         currentMultiplier = 1;
         missCount += 1;

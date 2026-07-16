@@ -21,9 +21,6 @@ public class DialogueLine
     [TextArea]
     public string speakerLine;
 
-    public AudioClip voiceSound;
-    public float voicePitch = 1f;
-
     public string GetName()
     {
         return speakerName;

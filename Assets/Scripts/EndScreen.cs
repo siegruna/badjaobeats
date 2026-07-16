@@ -67,11 +67,11 @@ public class EndScreen : MonoBehaviour
     public void Retry()
     {
         string mostRecentScene = PlayerPrefs.GetString("MostRecent", "SelectScreen");
-        SceneManager.LoadSceneAsync(mostRecentScene);
+        StartCoroutine(ScreenFader.Instance.FadeOut(mostRecentScene));
     }
 
     public void GiveUp()
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        StartCoroutine(ScreenFader.Instance.FadeOut("MainMenu"));
     }
 }

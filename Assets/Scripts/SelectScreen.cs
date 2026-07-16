@@ -7,15 +7,20 @@ using UnityEngine.UI;
 
 public class SelectScreen : MonoBehaviour
 {
-    public List<Sprite> levelSprites;
-    //public Image lockedIcon;
-    public List<AudioClip> songs;
+    public List<SongPreviewSO> songPreviews;
 
     public int selectedSongIndex = 0;
     public Button selectButton;
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip squeakSound;
+
+    [SerializeField] Sprite easySprite;
+    [SerializeField] Sprite mediumSprite;
+    [SerializeField] Sprite hardSprite;
+
+    [SerializeField] Image difficultyImage;
+
     void Start()
     {
         string mostRecent = PlayerPrefs.GetString("MostRecent", "Level1");
@@ -23,8 +28,10 @@ public class SelectScreen : MonoBehaviour
         selectedSongIndex = mostRecent[^1] - 1 - '0';
 
         StartCoroutine(ScreenFader.Instance.FadeIn());
-        selectButton.GetComponent<Image>().sprite = levelSprites[0];
-        audioSource.clip = songs[0];
+        selectButton.GetComponent<Image>().sprite = songPreviews[0].placard;
+        audioSource.clip = songPreviews[0].clipPreview;
+        SetDifficulty(songPreviews[0].difficulty);
+
         audioSource.Play();
     }
 
@@ -32,6 +39,22 @@ public class SelectScreen : MonoBehaviour
     {
         string levelName = "Level" + (selectedSongIndex + 1);
         StartCoroutine (ScreenFader.Instance.FadeOut(levelName));
+    }
+
+    private void SetDifficulty(Difficulty difficulty)
+    {
+        if (difficulty == Difficulty.Easy)
+        {
+            difficultyImage.sprite = easySprite;
+        }
+        else if (difficulty == Difficulty.Medium)
+        {
+            difficultyImage.sprite = mediumSprite;
+        }
+        else
+        {
+            difficultyImage.sprite = hardSprite;
+        }
     }
 
     public void PreviousSong()
@@ -45,7 +68,7 @@ public class SelectScreen : MonoBehaviour
 
     public void NextSong()
     {
-        if (selectedSongIndex < levelSprites.Count - 1)
+        if (selectedSongIndex < songPreviews.Count - 1)
         {
             selectedSongIndex++;
             UpdateUI();
@@ -59,8 +82,9 @@ public class SelectScreen : MonoBehaviour
 
     private void UpdateUI()
     {
-        selectButton.gameObject.GetComponent<Image>().sprite = levelSprites[selectedSongIndex];
-        audioSource.clip = songs[selectedSongIndex];
+        selectButton.GetComponent<Image>().sprite = songPreviews[selectedSongIndex].placard;
+        SetDifficulty(songPreviews[selectedSongIndex].difficulty);
+        audioSource.clip = songPreviews[selectedSongIndex].clipPreview;
         audioSource.Play();
     }
 

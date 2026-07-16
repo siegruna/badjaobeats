@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f117c870046f3a3438dffc3075367d08, type: 3}
+  m_Name: level4_1
+  m_EditorClassIdentifier: 
+  nodeID: 
+  description: 'You didn''t perform perfectly, which caused you to be a little short
+    from your daily quota.
+
+
+    What will you say to the passengers?'
+  choices:
+  - choiceText: Ate, may trabaho ka naman diba? Barya lang hinihingi ko oh.
+    nextNodeID: melon
+    isRandom: 0
+    randomNodeID: 
+    ending: 
+  - choiceText: Salamat po sa oras niyo. Kahit barya lang po pangkape, masaya na
+      po ako.
+    nextNodeID: carrot
+    isRandom: 1
+    randomNodeID: radish
+    ending: 
+  - choiceText: Pasensya na po sa istorbo, ate. Baka po may konting barya kayo dyan,
+      kahit magkano lang po pambili ng hapunan.
+    nextNodeID: grape
+    isRandom: 0
+    randomNodeID: 
+    ending: 

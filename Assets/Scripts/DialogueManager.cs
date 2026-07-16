@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueActive = false;
 
+    [SerializeField] AudioSource audioSource;
     private void Awake()
     {
         dialoguePanel.SetActive(false);
@@ -74,6 +75,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeLine()
     {
         isTyping = true;
+        audioSource.Play();
 
         speakerName.SetText(dialogueData.dialogueLines[dialogueIndex].GetName());
         portrait.sprite = dialogueData.dialogueLines[dialogueIndex].GetPortrait();
@@ -87,6 +89,7 @@ public class DialogueManager : MonoBehaviour
 
         isTyping = false;
 
+        audioSource.Stop();
         yield return new WaitForSeconds(dialogueData.autoProgressDelay);
         NextLine();
     }
@@ -137,13 +140,14 @@ public class DialogueManager : MonoBehaviour
             }
             else if (SceneManager.GetActiveScene().name == "Level2")
             {
-                SceneManager.LoadSceneAsync("Level3");
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level3"));
             }
             else if (SceneManager.GetActiveScene().name == "Level3")
             {
-                // Game completed, go to ending + credits
-                // Note: Add good ending here
-
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level4"));
+            }
+            else if (SceneManager.GetActiveScene().name == "Level4")
+            {
                 PlayerPrefs.SetInt("Ending", 1);
                 StartCoroutine(ScreenFader.Instance.FadeOut());
             }

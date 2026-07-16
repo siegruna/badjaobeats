@@ -20,6 +20,9 @@ public struct PleadingChoice
     public string choiceText;
     public string nextNodeID;
 
+    public bool isRandom;
+    public string randomNodeID;
+
     [Header("Determines if the node ends with an ending or proceeds to the next level")]
     public string ending;
 }

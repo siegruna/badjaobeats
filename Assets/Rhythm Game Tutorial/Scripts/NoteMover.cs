@@ -34,7 +34,7 @@ public class NoteMover : MonoBehaviour
             if (pressable)
             {
                 double timeDifference = Math.Abs(songTime - hitTime);
-                if (timeDifference <= 0.1)
+                if (timeDifference <= 0.05)
                 {
                     GameManager.Instance.PerfectHit();
                 }

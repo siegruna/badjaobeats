@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class ModeScreen : MonoBehaviour
 {
     [SerializeField] private Button freeplayButton;
-
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip squeakSounds;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +42,10 @@ public class ModeScreen : MonoBehaviour
     public void BackButton()
     {
         StartCoroutine(ScreenFader.Instance.FadeOut("MainMenu"));
+    }
+
+    public void TetoButton()
+    {
+        audioSource.PlayOneShot(squeakSounds);
     }
 }

@@ -22,8 +22,18 @@ MonoBehaviour:
   - choiceText: Boss, pasensya na, Baka may barya kayo dyan, pambili lang ng po ng
       tubig.
     nextNodeID: potato
+    isRandom: 0
+    randomNodeID: 
     ending: 
   - choiceText: Sige na bossing, ang dami niyo namang pera pang-gimik eh. Ambagan
       niyo na ako.
     nextNodeID: tacocat
+    isRandom: 0
+    randomNodeID: 
+    ending: 
+  - choiceText: Mga sir/ma'am, kahit bente lang galing sainyong lahat, masaya na
+      po ako.
+    nextNodeID: cat
+    isRandom: 1
+    randomNodeID: dog
     ending: 
