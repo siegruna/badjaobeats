@@ -11,7 +11,7 @@ public class ModeScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("FreeplayUnlocked", 0) == 1)
+        if (PlayerPrefs.GetInt("FreeplayUnlocked", 1) == 1)
         {
             freeplayButton.interactable = true;
         }
@@ -32,6 +32,9 @@ public class ModeScreen : MonoBehaviour
 
     public void FreePlay()
     {
+        // Reset the most recent to Level 1 when this is clicked.
+        PlayerPrefs.SetInt("Mode", 1);
+        PlayerPrefs.SetString("MostRecent", "Level1");
         StartCoroutine(ScreenFader.Instance.FadeOut("SelectScreen"));
     }
 

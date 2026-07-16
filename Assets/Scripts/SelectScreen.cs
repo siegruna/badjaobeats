@@ -9,16 +9,23 @@ public class SelectScreen : MonoBehaviour
 {
     public List<Sprite> levelSprites;
     //public Image lockedIcon;
+    public List<AudioClip> songs;
 
     public int selectedSongIndex = 0;
     public Button selectButton;
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip squeakSound;
     void Start()
     {
-        // 1 means Freeplay
-        PlayerPrefs.SetInt("Mode", 1);
+        string mostRecent = PlayerPrefs.GetString("MostRecent", "Level1");
+
+        selectedSongIndex = mostRecent[^1] - 1 - '0';
 
         StartCoroutine(ScreenFader.Instance.FadeIn());
         selectButton.GetComponent<Image>().sprite = levelSprites[0];
+        audioSource.clip = songs[0];
+        audioSource.Play();
     }
 
     public void SelectSong()
@@ -53,5 +60,12 @@ public class SelectScreen : MonoBehaviour
     private void UpdateUI()
     {
         selectButton.gameObject.GetComponent<Image>().sprite = levelSprites[selectedSongIndex];
+        audioSource.clip = songs[selectedSongIndex];
+        audioSource.Play();
+    }
+
+    public void TetoButton()
+    {
+        audioSource.PlayOneShot(squeakSound);
     }
 }

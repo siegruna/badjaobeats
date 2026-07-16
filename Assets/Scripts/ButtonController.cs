@@ -11,6 +11,7 @@ public class ButtonController : MonoBehaviour
     public Sprite pressedImage;
 
     public KeyCode keyToPress = KeyCode.Space; // Default key to press is Spacebar
+    public KeyCode oppositeKey = KeyCode.Space;
 
     public Image feedback;
 
@@ -22,7 +23,7 @@ public class ButtonController : MonoBehaviour
     {
         if (!DialogueManager.Instance.dialogueActive)
         {
-            if (Input.GetKeyDown(keyToPress))
+            if (Input.GetKeyDown(keyToPress) && !Input.GetKeyDown(oppositeKey))
             {
                 hitBar.sprite = pressedImage;
             }

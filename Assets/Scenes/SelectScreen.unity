@@ -205,9 +205,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1835887460}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 355755088}
+        m_TargetAssemblyTypeName: SelectScreen, Assembly-CSharp
+        m_MethodName: TetoButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -378,8 +378,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b0841684710188c46a60a15e7e2ceb95, type: 3}
   - {fileID: 21300000, guid: 1f7f6450eef441043bdf9cefa370b870, type: 3}
   - {fileID: 21300000, guid: c46d5e1e2f74be842b05123113127383, type: 3}
+  - {fileID: 21300000, guid: 3f35a0663dfb2f6449908a77391cd51f, type: 3}
+  songs:
+  - {fileID: 8300000, guid: 136c25aed8bf9bd4c810a911871bbe82, type: 3}
+  - {fileID: 8300000, guid: 619d92e36184fbb42844a83ef559facb, type: 3}
+  - {fileID: 8300000, guid: 1574be4370d083844b4cc8e54191309a, type: 3}
+  - {fileID: 8300000, guid: 3a2dcdb54785f3941b3e2de6a4e5b3ec, type: 3}
+  - {fileID: 8300000, guid: 1a49a8499cba1054aa63aeec486a5560, type: 3}
   selectedSongIndex: 0
   selectButton: {fileID: 1668061175}
+  audioSource: {fileID: 1835887460}
+  squeakSound: {fileID: 8300000, guid: 7192dc0fbef082e44b819f8b23a07a94, type: 3}
 --- !u!1 &679190097
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,8 +974,8 @@ RectTransform:
   m_Children:
   - {fileID: 355755084}
   - {fileID: 294213702}
-  - {fileID: 1756256770}
   - {fileID: 1136789696}
+  - {fileID: 1756256770}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1342,7 +1351,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7192dc0fbef082e44b819f8b23a07a94, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

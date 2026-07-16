@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc78425ff5a5954c84a72b448a85a75, type: 3}
+  m_Name: level3_good
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: Josep
+    speakerPortrait: {fileID: 0}
+    speakerLine: Lupet mo, pre! Pwede ka na mag-audition sa TV! Eto ambag-ambag kami
+      para sayo oh.
+    voiceSound: {fileID: 0}
+    voicePitch: 0
+  - speakerName: You
+    speakerPortrait: {fileID: 0}
+    speakerLine: Salamat boss! Malaking tulong 'to para sa pamilya ko, hirap kasi
+      humanap ng trabaho ngayon.
+    voiceSound: {fileID: 0}
+    voicePitch: 0
+  typingSpeed: 0.02
+  autoProgressDelay: 1.5
+  dialogueType: 3

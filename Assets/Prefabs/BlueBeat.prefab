@@ -126,3 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressable: 0
   keyToPress: 100
+  oppositeKey: 97

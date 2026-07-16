@@ -410,6 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 214416997}
   audioSource: {fileID: 1049631226}
+  carEngineSounds: {fileID: 8300000, guid: 94accae01e378c2478d10adfa2b57d38, type: 3}
 --- !u!1 &758645878
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,8 +506,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 94accae01e378c2478d10adfa2b57d38, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 1a49a8499cba1054aa63aeec486a5560, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -713,18 +714,6 @@ MonoBehaviour:
       - m_Target: {fileID: 519420033}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: PlayGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1049631226}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

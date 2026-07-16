@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] private AudioClip carEngineSounds;
     private float startVolume;
 
     private void Start()
@@ -19,6 +20,7 @@ public class MenuController : MonoBehaviour
     }
     public void PlayGame()
     {
+        audioSource.PlayOneShot(carEngineSounds);
         StartCoroutine(StartPlaying());   
     }
 

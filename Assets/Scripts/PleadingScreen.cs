@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -24,11 +25,6 @@ public class PleadingScreen : MonoBehaviour
     [SerializeField]
     private Sprite sprite3;
 
-    [Header("Titles")]
-    [SerializeField] private string title1;
-    [SerializeField] private string title2;
-    [SerializeField] private string title3;
-
     [Header("Event Nodes")]
     [SerializeField] private List<PleadingSO> eventNodes = new List<PleadingSO>();
 
@@ -44,21 +40,18 @@ public class PleadingScreen : MonoBehaviour
 
         string mostRecentScene = PlayerPrefs.GetString("MostRecent", "SelectScreen");
 
-        if (mostRecentScene == "Level1")
+        if (mostRecentScene == "Level2")
         {
             currentNodeIndex = 0;
-            title.text = title1;
-        }
-        else if (mostRecentScene == "Level2")
-        {
-            currentNodeIndex = 1;
-            title.text = title2;
-            
         }
         else if (mostRecentScene == "Level3")
         {
+            currentNodeIndex = 1;
+            
+        }
+        else if (mostRecentScene == "Level4")
+        {
             currentNodeIndex = 2;
-            title.text = title3;
         }
 
         description.text = eventNodes[currentNodeIndex].description;
@@ -95,7 +88,12 @@ public class PleadingScreen : MonoBehaviour
 
     public void Option1()
     {
-        TransitionToEnding(0);
+        bool hasEnding = TransitionToEnding(0);
+
+        if (hasEnding)
+        {
+            return;
+        }
 
         foreach (PleadingSO node in eventNodes)
         {
@@ -103,9 +101,7 @@ public class PleadingScreen : MonoBehaviour
             {
                 currentNodeIndex = eventNodes.IndexOf(node);
                 break;
-            }
-
-            
+            }     
         }
 
         UpdateUI();
@@ -113,7 +109,13 @@ public class PleadingScreen : MonoBehaviour
 
     public void Option2()
     {
-        TransitionToEnding(1);
+        bool hasEnding = TransitionToEnding(1);
+
+        if (hasEnding)
+        {
+            return;
+        }
+        
 
         foreach (PleadingSO node in eventNodes)
         {
@@ -130,7 +132,12 @@ public class PleadingScreen : MonoBehaviour
 
     public void Option3()
     {
-        TransitionToEnding(2);
+        bool hasEnding = TransitionToEnding(2);
+
+        if (hasEnding)
+        {
+            return;
+        }
 
         foreach (PleadingSO node in eventNodes)
         {
@@ -142,7 +149,6 @@ public class PleadingScreen : MonoBehaviour
         }
 
         UpdateUI();
-
     }
 
     private void UpdateUI() {
@@ -159,30 +165,35 @@ public class PleadingScreen : MonoBehaviour
         }
     }
 
-    private void TransitionToEnding(int choice)
+    private bool TransitionToEnding(int choice)
     {
         if (eventNodes[currentNodeIndex].choices[choice].ending == "Good")
         {
             PlayerPrefs.SetInt("Ending", 1);
-            ScreenFader.Instance.StartCoroutine(ScreenFader.Instance.FadeOut());
+            StartCoroutine(ScreenFader.Instance.FadeOut());
+            return true;
         }
         else if (eventNodes[currentNodeIndex].choices[choice].ending == "Bad")
         {
             PlayerPrefs.SetInt("Ending", 0);
-            ScreenFader.Instance.StartCoroutine(ScreenFader.Instance.FadeOut());
+            StartCoroutine(ScreenFader.Instance.FadeOut());
+            return true;
         }
         else if (eventNodes[currentNodeIndex].choices[choice].ending == "Continue")
         {
             string lastScene = PlayerPrefs.GetString("MostRecent", "SelectScreen");
+            Debug.Log(lastScene);
 
-            if (lastScene == "Level1")
-            {
-                SceneManager.LoadSceneAsync("Level2");
-            }
             if (lastScene == "Level2")
             {
-                SceneManager.LoadSceneAsync("Level3");
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level3"));
             }
+            else if (lastScene == "Level3")
+            {
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level4"));
+            }
+            return true;
         }
+        return false;
     }
 }

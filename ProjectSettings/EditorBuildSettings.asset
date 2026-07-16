@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PleadingScreen.unity
     guid: a44bb0029aa351944b00cb23e23d4762
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 95fe67bdc6b1a0a47a9fcf88ec5178bc
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: beb69a9b6e0d1dd458132978cd869b67
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 6bab24214ce95c04fb59634dc1d481f4
   m_configObjects: {}

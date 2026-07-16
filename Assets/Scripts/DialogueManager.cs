@@ -38,11 +38,19 @@ public class DialogueManager : MonoBehaviour
     // Called whenever a dialogue needs to happen
     public void StartDialogue()
     {
-        dialogueActive = true;
-        dialogueIndex = 0;
-        dialoguePanel.SetActive(true);
+        if (dialogueData != null)
+        {
+            dialogueActive = true;
+            dialogueIndex = 0;
+            dialoguePanel.SetActive(true);
 
-        StartCoroutine(TypeLine());
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            GameManager.Instance.StartGame();
+        }
+        
     }
 
     void NextLine()
@@ -96,22 +104,36 @@ public class DialogueManager : MonoBehaviour
         }
         else if (dialogueData.dialogueType == DialogueType.BadResult)
         {
-            // Proceed to the bad ending directly
-            PlayerPrefs.SetInt("Ending", 0);
-            StartCoroutine(ScreenFader.Instance.FadeOut());
+            if (SceneManager.GetActiveScene().name == "Level1")
+            {
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level2"));
+            }
+            else
+            {
+                // Proceed to the bad ending directly
+                PlayerPrefs.SetInt("Ending", 0);
+                StartCoroutine(ScreenFader.Instance.FadeOut());
+            }
         }
         else if (dialogueData.dialogueType == DialogueType.MediumResult)
         {
-            // Begging simulator T_T 
-            // Depending on the result, either present bad ending or proceed to next stage (make this a new scene or something i guess).
-            StartCoroutine(ScreenFader.Instance.FadeOut("PleadingScreen"));
+            if (SceneManager.GetActiveScene().name == "Level1")
+            {
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level2"));
+            }
+            else
+            {
+                // Begging simulator T_T 
+                // Depending on the result, either present bad ending or proceed to next stage (make this a new scene or something i guess).
+                StartCoroutine(ScreenFader.Instance.FadeOut("PleadingScreen"));
+            }
         }
         else
         {
             // Proceed to the next stage.
             if (SceneManager.GetActiveScene().name == "Level1")
             {
-                SceneManager.LoadSceneAsync("Level2");
+                StartCoroutine(ScreenFader.Instance.FadeOut("Level2"));
             }
             else if (SceneManager.GetActiveScene().name == "Level2")
             {

@@ -12,6 +12,7 @@ public class NoteMover : MonoBehaviour
     public bool pressable = false;
 
     public KeyCode keyToPress = KeyCode.A;
+    public KeyCode oppositeKey = KeyCode.D;
 
     public void Init(NoteData data, RhythmConductor conductor, Vector3 start, Vector3 end, float travelTime)
     {
@@ -28,7 +29,7 @@ public class NoteMover : MonoBehaviour
         double t = 1.0 - (hitTime - songTime) / travelTime;
         transform.position = Vector3.LerpUnclamped(startPos, endPos, (float)t);
 
-        if (Input.GetKeyDown(keyToPress))
+        if (Input.GetKeyDown(keyToPress) && !Input.GetKeyDown(oppositeKey))
         {
             if (pressable)
             {

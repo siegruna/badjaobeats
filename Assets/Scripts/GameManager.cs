@@ -31,7 +31,9 @@ public class GameManager : MonoBehaviour
     // Passenger Stuff
     public Image passenger1;
     public Image passenger2;
-    private int passenger1Index, passenger2Index;
+    public Image passenger3;
+
+    private int passenger1Index, passenger2Index, passenger3Index;
 
     public List<PassengerSO> availablePassengers;
 
@@ -45,6 +47,12 @@ public class GameManager : MonoBehaviour
 
     public float speed = 2f;
     public float height = 2f;
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip happySounds;
+    [SerializeField] AudioClip angrySounds;
+
+    bool angryFlag = false, happyFlag = false;
 
     public void Start()
     {
@@ -60,27 +68,76 @@ public class GameManager : MonoBehaviour
 
         startPos = jeepney.anchoredPosition;
 
-        // Select 2 passengers
-        passenger1Index = UnityEngine.Random.Range(0, availablePassengers.Count);
-        passenger2Index = UnityEngine.Random.Range(0, availablePassengers.Count);
-
-        if (passenger2Index == passenger1Index)
+        // Initialize unselected passengers
+        List<int> unselectedPassengers = new List<int>();
+        for (int i = 0; i < availablePassengers.Count; i++)
         {
-            passenger2Index = (passenger2Index + 1) % availablePassengers.Count;
+            unselectedPassengers.Add(i);
         }
 
-        // Check for static characters
-        if ((availablePassengers[passenger1Index].isStatic && availablePassengers[passenger1Index].position != 0) || 
-            (availablePassengers[passenger2Index].isStatic && availablePassengers[passenger2Index].position != 1))
+
+        List<bool> occupiedSeats = new List<bool>();
+        for (int i = 0; i < 3; i++)
         {
-            int temp = passenger2Index;
-            passenger2Index = passenger1Index;
-            passenger1Index = temp;
-            
+            occupiedSeats.Add(false);
+        }
+
+        // Check for key characters
+        for (int i = 0; i < availablePassengers.Count; i++)
+        {
+            if (availablePassengers[i].isStatic)
+            {
+                int position = availablePassengers[i].position;
+                if (position == 0)
+                {
+                    passenger1Index = i;
+                }
+                else if (position == 1)
+                {
+                    passenger2Index = i;
+                }
+                else
+                {
+                    passenger3Index = i;
+                }
+
+                occupiedSeats[position] = true;
+                unselectedPassengers.Remove(position);
+                break;
+            }
+        }
+
+        for (int i = 0; i < occupiedSeats.Count; i++)
+        {
+            bool occupied = occupiedSeats[i];
+
+            if (occupied)
+            {
+                continue;
+            }
+
+            int r = UnityEngine.Random.Range(0, unselectedPassengers.Count);
+
+            if (i == 0)
+            {
+                passenger1Index = unselectedPassengers[r];
+
+            }
+            else if (i == 1)
+            {
+                passenger2Index = unselectedPassengers[r];
+            }
+            else
+            {
+                passenger3Index = unselectedPassengers[r];
+            }
+
+            unselectedPassengers.RemoveAt(r);
         }
 
         passenger1.sprite = availablePassengers[passenger1Index].expressions[1];
         passenger2.sprite = availablePassengers[passenger2Index].expressions[1];
+        passenger3.sprite = availablePassengers[passenger3Index].expressions[1];
 
         StartCoroutine(Initialize());
     }
@@ -128,8 +185,6 @@ public class GameManager : MonoBehaviour
         {
             // Good end
             DialogueManager.Instance.dialogueData = dialogues[2];
-
-            UnlockLevel();
         }
 
         // Only start dialogue if in story mode.
@@ -137,19 +192,10 @@ public class GameManager : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue();
         }
-    }
-
-    public void UnlockLevel()
-    {
-        string currentScene = SceneManager.GetActiveScene().name;
-
-        if (currentScene == "Level1")
+        else // Otherwise, just go back to the select screen
         {
-            PlayerPrefs.SetInt("Level2Unlocked", 1);
-        }
-        else if (currentScene == "Level2")
-        {
-            PlayerPrefs.SetInt("Level3Unlocked", 1);
+            PlayerPrefs.SetString("MostRecent", SceneManager.GetActiveScene().name);
+            StartCoroutine(ScreenFader.Instance.FadeOut("SelectScreen"));
         }
     }
 
@@ -163,18 +209,31 @@ public class GameManager : MonoBehaviour
 
         if (currentScore < milestones[0] && missCount >= 10)
         {
+            if (!angryFlag)
+            {
+                audioSource.PlayOneShot(angrySounds);
+                angryFlag = true;
+            }
             passenger1.sprite = availablePassengers[passenger1Index].expressions[2];
             passenger2.sprite = availablePassengers[passenger2Index].expressions[2];
+            passenger3.sprite = availablePassengers[passenger3Index].expressions[2];
         }
         else if (currentScore < milestones[1])
         {
             passenger1.sprite = availablePassengers[passenger1Index].expressions[1];
             passenger2.sprite = availablePassengers[passenger2Index].expressions[1];
+            passenger3.sprite = availablePassengers[passenger3Index].expressions[1];
         }
         else
         {
+            if (!happyFlag)
+            {
+                audioSource.PlayOneShot(happySounds);
+                happyFlag = true;   
+            }
             passenger1.sprite = availablePassengers[passenger1Index].expressions[0];
             passenger2.sprite = availablePassengers[passenger2Index].expressions[0];
+            passenger3.sprite = availablePassengers[passenger3Index].expressions[0];
         }
 
         StartCoroutine(SpawnIndicator(indicator));
@@ -200,6 +259,7 @@ public class GameManager : MonoBehaviour
 
     public void NoteMissed()
     {
+        currentScore = Math.Max(currentScore - 10, 0);
         currentCombo = 0;
         currentMultiplier = 1;
         missCount += 1;

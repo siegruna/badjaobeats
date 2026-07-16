@@ -1,0 +1,1093 @@
+{
+  "bpm": 116.0,
+  "notes": [
+    {
+      "time": 0.0,
+      "type": "Ka"
+    },
+    {
+      "time": 1.78,
+      "type": "Don"
+    },
+    {
+      "time": 2.157,
+      "type": "Ka"
+    },
+    {
+      "time": 2.496,
+      "type": "Don"
+    },
+    {
+      "time": 2.873,
+      "type": "Ka"
+    },
+    {
+      "time": 3.286,
+      "type": "Don"
+    },
+    {
+      "time": 3.705,
+      "type": "Ka"
+    },
+    {
+      "time": 4.09,
+      "type": "Don"
+    },
+    {
+      "time": 4.492,
+      "type": "Ka"
+    },
+    {
+      "time": 4.905,
+      "type": "Don"
+    },
+    {
+      "time": 5.265,
+      "type": "Ka"
+    },
+    {
+      "time": 5.689,
+      "type": "Don"
+    },
+    {
+      "time": 6.067,
+      "type": "Ka"
+    },
+    {
+      "time": 6.481,
+      "type": "Don"
+    },
+    {
+      "time": 6.855,
+      "type": "Ka"
+    },
+    {
+      "time": 7.345,
+      "type": "Don"
+    },
+    {
+      "time": 7.695,
+      "type": "Ka"
+    },
+    {
+      "time": 8.072,
+      "type": "Don"
+    },
+    {
+      "time": 8.47,
+      "type": "Ka"
+    },
+    {
+      "time": 8.861,
+      "type": "Don"
+    },
+    {
+      "time": 9.253,
+      "type": "Ka"
+    },
+    {
+      "time": 9.663,
+      "type": "Don"
+    },
+    {
+      "time": 10.057,
+      "type": "Ka"
+    },
+    {
+      "time": 10.49,
+      "type": "Don"
+    },
+    {
+      "time": 10.874,
+      "type": "Ka"
+    },
+    {
+      "time": 11.303,
+      "type": "Don"
+    },
+    {
+      "time": 11.699,
+      "type": "Ka"
+    },
+    {
+      "time": 12.124,
+      "type": "Don"
+    },
+    {
+      "time": 12.484,
+      "type": "Ka"
+    },
+    {
+      "time": 12.873,
+      "type": "Don"
+    },
+    {
+      "time": 13.265,
+      "type": "Ka"
+    },
+    {
+      "time": 13.668,
+      "type": "Don"
+    },
+    {
+      "time": 14.007,
+      "type": "Ka"
+    },
+    {
+      "time": 14.477,
+      "type": "Don"
+    },
+    {
+      "time": 15.33,
+      "type": "Don"
+    },
+    {
+      "time": 15.5,
+      "type": "Don"
+    },
+    {
+      "time": 15.903,
+      "type": "Ka"
+    },
+    {
+      "time": 16.888,
+      "type": "Don"
+    },
+    {
+      "time": 17.097,
+      "type": "Ka"
+    },
+    {
+      "time": 17.341,
+      "type": "Don"
+    },
+    {
+      "time": 17.523,
+      "type": "Ka"
+    },
+    {
+      "time": 17.739,
+      "type": "Don"
+    },
+    {
+      "time": 18.494,
+      "type": "Don"
+    },
+    {
+      "time": 18.683,
+      "type": "Don"
+    },
+    {
+      "time": 19.128,
+      "type": "Ka"
+    },
+    {
+      "time": 20.074,
+      "type": "Don"
+    },
+    {
+      "time": 20.301,
+      "type": "Ka"
+    },
+    {
+      "time": 20.532,
+      "type": "Don"
+    },
+    {
+      "time": 20.719,
+      "type": "Ka"
+    },
+    {
+      "time": 20.93,
+      "type": "Don"
+    },
+    {
+      "time": 21.805,
+      "type": "Don"
+    },
+    {
+      "time": 21.994,
+      "type": "Ka"
+    },
+    {
+      "time": 22.372,
+      "type": "Don"
+    },
+    {
+      "time": 23.356,
+      "type": "Don"
+    },
+    {
+      "time": 23.563,
+      "type": "Ka"
+    },
+    {
+      "time": 23.778,
+      "type": "Don"
+    },
+    {
+      "time": 23.952,
+      "type": "Ka"
+    },
+    {
+      "time": 24.187,
+      "type": "Don"
+    },
+    {
+      "time": 24.949,
+      "type": "Don"
+    },
+    {
+      "time": 25.185,
+      "type": "Don"
+    },
+    {
+      "time": 25.553,
+      "type": "Ka"
+    },
+    {
+      "time": 27.367,
+      "type": "Don"
+    },
+    {
+      "time": 28.508,
+      "type": "Don"
+    },
+    {
+      "time": 28.757,
+      "type": "Don"
+    },
+    {
+      "time": 28.953,
+      "type": "Don"
+    },
+    {
+      "time": 29.19,
+      "type": "Don"
+    },
+    {
+      "time": 29.394,
+      "type": "Don"
+    },
+    {
+      "time": 29.568,
+      "type": "Don"
+    },
+    {
+      "time": 29.789,
+      "type": "Ka"
+    },
+    {
+      "time": 30.006,
+      "type": "Don"
+    },
+    {
+      "time": 30.196,
+      "type": "Ka"
+    },
+    {
+      "time": 30.429,
+      "type": "Don"
+    },
+    {
+      "time": 31.593,
+      "type": "Don"
+    },
+    {
+      "time": 31.754,
+      "type": "Don"
+    },
+    {
+      "time": 31.95,
+      "type": "Ka"
+    },
+    {
+      "time": 33.092,
+      "type": "Don"
+    },
+    {
+      "time": 33.265,
+      "type": "Don"
+    },
+    {
+      "time": 33.509,
+      "type": "Ka"
+    },
+    {
+      "time": 34.757,
+      "type": "Don"
+    },
+    {
+      "time": 34.936,
+      "type": "Don"
+    },
+    {
+      "time": 35.126,
+      "type": "Ka"
+    },
+    {
+      "time": 36.349,
+      "type": "Don"
+    },
+    {
+      "time": 36.764,
+      "type": "Ka"
+    },
+    {
+      "time": 38.086,
+      "type": "Don"
+    },
+    {
+      "time": 38.491,
+      "type": "Ka"
+    },
+    {
+      "time": 38.912,
+      "type": "Don"
+    },
+    {
+      "time": 39.293,
+      "type": "Ka"
+    },
+    {
+      "time": 39.666,
+      "type": "Don"
+    },
+    {
+      "time": 40.05,
+      "type": "Ka"
+    },
+    {
+      "time": 40.459,
+      "type": "Don"
+    },
+    {
+      "time": 40.792,
+      "type": "Ka"
+    },
+    {
+      "time": 41.251,
+      "type": "Don"
+    },
+    {
+      "time": 41.684,
+      "type": "Ka"
+    },
+    {
+      "time": 42.09,
+      "type": "Don"
+    },
+    {
+      "time": 42.474,
+      "type": "Ka"
+    },
+    {
+      "time": 42.875,
+      "type": "Don"
+    },
+    {
+      "time": 43.322,
+      "type": "Ka"
+    },
+    {
+      "time": 44.028,
+      "type": "Don"
+    },
+    {
+      "time": 44.211,
+      "type": "Ka"
+    },
+    {
+      "time": 44.731,
+      "type": "Don"
+    },
+    {
+      "time": 44.942,
+      "type": "Don"
+    },
+    {
+      "time": 45.529,
+      "type": "Don"
+    },
+    {
+      "time": 45.689,
+      "type": "Don"
+    },
+    {
+      "time": 45.858,
+      "type": "Ka"
+    },
+    {
+      "time": 46.366,
+      "type": "Don"
+    },
+    {
+      "time": 47.083,
+      "type": "Don"
+    },
+    {
+      "time": 47.242,
+      "type": "Don"
+    },
+    {
+      "time": 47.404,
+      "type": "Ka"
+    },
+    {
+      "time": 47.971,
+      "type": "Don"
+    },
+    {
+      "time": 48.168,
+      "type": "Don"
+    },
+    {
+      "time": 48.749,
+      "type": "Don"
+    },
+    {
+      "time": 48.965,
+      "type": "Ka"
+    },
+    {
+      "time": 49.731,
+      "type": "Don"
+    },
+    {
+      "time": 50.568,
+      "type": "Don"
+    },
+    {
+      "time": 50.728,
+      "type": "Don"
+    },
+    {
+      "time": 51.124,
+      "type": "Ka"
+    },
+    {
+      "time": 52.136,
+      "type": "Don"
+    },
+    {
+      "time": 52.367,
+      "type": "Ka"
+    },
+    {
+      "time": 52.564,
+      "type": "Don"
+    },
+    {
+      "time": 52.728,
+      "type": "Ka"
+    },
+    {
+      "time": 52.934,
+      "type": "Don"
+    },
+    {
+      "time": 53.732,
+      "type": "Don"
+    },
+    {
+      "time": 53.912,
+      "type": "Don"
+    },
+    {
+      "time": 54.336,
+      "type": "Ka"
+    },
+    {
+      "time": 55.298,
+      "type": "Don"
+    },
+    {
+      "time": 55.531,
+      "type": "Ka"
+    },
+    {
+      "time": 55.769,
+      "type": "Don"
+    },
+    {
+      "time": 55.92,
+      "type": "Ka"
+    },
+    {
+      "time": 56.173,
+      "type": "Don"
+    },
+    {
+      "time": 57.0,
+      "type": "Don"
+    },
+    {
+      "time": 57.185,
+      "type": "Ka"
+    },
+    {
+      "time": 57.569,
+      "type": "Don"
+    },
+    {
+      "time": 58.399,
+      "type": "Ka"
+    },
+    {
+      "time": 58.652,
+      "type": "Ka"
+    },
+    {
+      "time": 58.905,
+      "type": "Don"
+    },
+    {
+      "time": 59.063,
+      "type": "Ka"
+    },
+    {
+      "time": 59.308,
+      "type": "Don"
+    },
+    {
+      "time": 60.14,
+      "type": "Ka"
+    },
+    {
+      "time": 60.384,
+      "type": "Don"
+    },
+    {
+      "time": 60.76,
+      "type": "Ka"
+    },
+    {
+      "time": 61.252,
+      "type": "Don"
+    },
+    {
+      "time": 61.494,
+      "type": "Don"
+    },
+    {
+      "time": 61.669,
+      "type": "Don"
+    },
+    {
+      "time": 61.816,
+      "type": "Ka"
+    },
+    {
+      "time": 62.036,
+      "type": "Don"
+    },
+    {
+      "time": 62.224,
+      "type": "Ka"
+    },
+    {
+      "time": 62.458,
+      "type": "Don"
+    },
+    {
+      "time": 63.311,
+      "type": "Don"
+    },
+    {
+      "time": 63.471,
+      "type": "Don"
+    },
+    {
+      "time": 63.92,
+      "type": "Ka"
+    },
+    {
+      "time": 64.891,
+      "type": "Don"
+    },
+    {
+      "time": 65.121,
+      "type": "Ka"
+    },
+    {
+      "time": 65.36,
+      "type": "Don"
+    },
+    {
+      "time": 65.518,
+      "type": "Ka"
+    },
+    {
+      "time": 65.762,
+      "type": "Don"
+    },
+    {
+      "time": 66.586,
+      "type": "Don"
+    },
+    {
+      "time": 66.774,
+      "type": "Ka"
+    },
+    {
+      "time": 67.15,
+      "type": "Don"
+    },
+    {
+      "time": 68.12,
+      "type": "Ka"
+    },
+    {
+      "time": 68.333,
+      "type": "Ka"
+    },
+    {
+      "time": 68.575,
+      "type": "Don"
+    },
+    {
+      "time": 68.722,
+      "type": "Ka"
+    },
+    {
+      "time": 68.95,
+      "type": "Don"
+    },
+    {
+      "time": 69.8,
+      "type": "Don"
+    },
+    {
+      "time": 69.988,
+      "type": "Don"
+    },
+    {
+      "time": 70.309,
+      "type": "Ka"
+    },
+    {
+      "time": 71.373,
+      "type": "Don"
+    },
+    {
+      "time": 71.549,
+      "type": "Ka"
+    },
+    {
+      "time": 71.768,
+      "type": "Don"
+    },
+    {
+      "time": 71.929,
+      "type": "Ka"
+    },
+    {
+      "time": 72.155,
+      "type": "Don"
+    },
+    {
+      "time": 72.79,
+      "type": "Ka"
+    },
+    {
+      "time": 73.158,
+      "type": "Don"
+    },
+    {
+      "time": 73.552,
+      "type": "Ka"
+    },
+    {
+      "time": 74.482,
+      "type": "Ka"
+    },
+    {
+      "time": 74.688,
+      "type": "Ka"
+    },
+    {
+      "time": 74.868,
+      "type": "Don"
+    },
+    {
+      "time": 75.009,
+      "type": "Ka"
+    },
+    {
+      "time": 75.155,
+      "type": "Ka"
+    },
+    {
+      "time": 75.386,
+      "type": "Don"
+    },
+    {
+      "time": 75.589,
+      "type": "Don"
+    },
+    {
+      "time": 75.807,
+      "type": "Don"
+    },
+    {
+      "time": 75.99,
+      "type": "Don"
+    },
+    {
+      "time": 76.172,
+      "type": "Ka"
+    },
+    {
+      "time": 76.368,
+      "type": "Ka"
+    },
+    {
+      "time": 76.555,
+      "type": "Ka"
+    },
+    {
+      "time": 76.714,
+      "type": "Ka"
+    },
+    {
+      "time": 76.929,
+      "type": "Don"
+    },
+    {
+      "time": 77.162,
+      "type": "Don"
+    },
+    {
+      "time": 77.385,
+      "type": "Don"
+    },
+    {
+      "time": 77.602,
+      "type": "Don"
+    },
+    {
+      "time": 77.756,
+      "type": "Don"
+    },
+    {
+      "time": 77.886,
+      "type": "Ka"
+    },
+    {
+      "time": 78.12,
+      "type": "Ka"
+    },
+    {
+      "time": 78.29,
+      "type": "Ka"
+    },
+    {
+      "time": 78.534,
+      "type": "Don"
+    },
+    {
+      "time": 78.877,
+      "type": "Don"
+    },
+    {
+      "time": 79.491,
+      "type": "Don"
+    },
+    {
+      "time": 79.684,
+      "type": "Ka"
+    },
+    {
+      "time": 79.938,
+      "type": "Don"
+    },
+    {
+      "time": 80.175,
+      "type": "Ka"
+    },
+    {
+      "time": 81.144,
+      "type": "Don"
+    },
+    {
+      "time": 81.299,
+      "type": "Don"
+    },
+    {
+      "time": 81.513,
+      "type": "Ka"
+    },
+    {
+      "time": 82.75,
+      "type": "Don"
+    },
+    {
+      "time": 82.923,
+      "type": "Don"
+    },
+    {
+      "time": 83.14,
+      "type": "Ka"
+    },
+    {
+      "time": 84.314,
+      "type": "Don"
+    },
+    {
+      "time": 84.71,
+      "type": "Ka"
+    },
+    {
+      "time": 85.833,
+      "type": "Don"
+    },
+    {
+      "time": 86.007,
+      "type": "Don"
+    },
+    {
+      "time": 86.211,
+      "type": "Ka"
+    },
+    {
+      "time": 87.615,
+      "type": "Ka"
+    },
+    {
+      "time": 87.79,
+      "type": "Ka"
+    },
+    {
+      "time": 87.947,
+      "type": "Don"
+    },
+    {
+      "time": 89.135,
+      "type": "Ka"
+    },
+    {
+      "time": 89.304,
+      "type": "Ka"
+    },
+    {
+      "time": 89.473,
+      "type": "Don"
+    },
+    {
+      "time": 90.781,
+      "type": "Don"
+    },
+    {
+      "time": 91.002,
+      "type": "Ka"
+    },
+    {
+      "time": 91.364,
+      "type": "Don"
+    },
+    {
+      "time": 91.94,
+      "type": "Don"
+    },
+    {
+      "time": 92.083,
+      "type": "Don"
+    },
+    {
+      "time": 92.225,
+      "type": "Ka"
+    },
+    {
+      "time": 92.755,
+      "type": "Don"
+    },
+    {
+      "time": 92.896,
+      "type": "Don"
+    },
+    {
+      "time": 93.05,
+      "type": "Ka"
+    },
+    {
+      "time": 93.52,
+      "type": "Ka"
+    },
+    {
+      "time": 93.705,
+      "type": "Ka"
+    },
+    {
+      "time": 93.885,
+      "type": "Don"
+    },
+    {
+      "time": 94.343,
+      "type": "Don"
+    },
+    {
+      "time": 94.567,
+      "type": "Don"
+    },
+    {
+      "time": 94.687,
+      "type": "Ka"
+    },
+    {
+      "time": 95.153,
+      "type": "Ka"
+    },
+    {
+      "time": 95.329,
+      "type": "Ka"
+    },
+    {
+      "time": 95.455,
+      "type": "Don"
+    },
+    {
+      "time": 95.899,
+      "type": "Ka"
+    },
+    {
+      "time": 96.08,
+      "type": "Ka"
+    },
+    {
+      "time": 96.284,
+      "type": "Don"
+    },
+    {
+      "time": 96.731,
+      "type": "Don"
+    },
+    {
+      "time": 96.888,
+      "type": "Don"
+    },
+    {
+      "time": 97.001,
+      "type": "Ka"
+    },
+    {
+      "time": 97.641,
+      "type": "Don"
+    },
+    {
+      "time": 98.629,
+      "type": "Don"
+    },
+    {
+      "time": 98.791,
+      "type": "Don"
+    },
+    {
+      "time": 99.109,
+      "type": "Ka"
+    },
+    {
+      "time": 100.018,
+      "type": "Don"
+    },
+    {
+      "time": 100.244,
+      "type": "Don"
+    },
+    {
+      "time": 100.427,
+      "type": "Ka"
+    },
+    {
+      "time": 100.597,
+      "type": "Don"
+    },
+    {
+      "time": 100.75,
+      "type": "Ka"
+    },
+    {
+      "time": 100.938,
+      "type": "Don"
+    },
+    {
+      "time": 101.746,
+      "type": "Ka"
+    },
+    {
+      "time": 101.935,
+      "type": "Ka"
+    },
+    {
+      "time": 102.309,
+      "type": "Don"
+    },
+    {
+      "time": 103.312,
+      "type": "Don"
+    },
+    {
+      "time": 103.512,
+      "type": "Don"
+    },
+    {
+      "time": 103.717,
+      "type": "Ka"
+    },
+    {
+      "time": 103.931,
+      "type": "Don"
+    },
+    {
+      "time": 104.155,
+      "type": "Ka"
+    },
+    {
+      "time": 104.944,
+      "type": "Ka"
+    },
+    {
+      "time": 105.142,
+      "type": "Ka"
+    },
+    {
+      "time": 105.446,
+      "type": "Don"
+    },
+    {
+      "time": 106.47,
+      "type": "Don"
+    },
+    {
+      "time": 106.75,
+      "type": "Don"
+    },
+    {
+      "time": 106.939,
+      "type": "Ka"
+    },
+    {
+      "time": 107.206,
+      "type": "Don"
+    },
+    {
+      "time": 107.42,
+      "type": "Ka"
+    },
+    {
+      "time": 108.02,
+      "type": "Ka"
+    },
+    {
+      "time": 108.37,
+      "type": "Don"
+    },
+    {
+      "time": 108.506,
+      "type": "Ka"
+    },
+    {
+      "time": 108.677,
+      "type": "Don"
+    }
+  ]
+}

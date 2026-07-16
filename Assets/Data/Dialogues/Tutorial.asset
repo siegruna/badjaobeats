@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc78425ff5a5954c84a72b448a85a75, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 28c0e592edd05bd4cb4cb7e9ec242cf0, type: 3}
+    speakerLine: Welcome to the Badjao Beats tutorial!
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 28c0e592edd05bd4cb4cb7e9ec242cf0, type: 3}
+    speakerLine: In this game, you play as a Badjao drummer to earn money.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 29f86786fe7386e45ba8a55425a10b5c, type: 3}
+    speakerLine: Press A to hit the Red Beats.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 78a5b5f7000d66b44afa23808626a15e, type: 3}
+    speakerLine: Press D to hit the Blue Beats.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: ecdb1f7cf080d4542b21998906fe157f, type: 3}
+    speakerLine: If you hit the notes perfectly, you can maximize your points gained.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 0f018e48bb138d44e9591169f763c9cc, type: 3}
+    speakerLine: A good hit will net you some points, but half the amount of a perfect
+      hit.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 7291ad3883ef0ae4d8e8ed74aa7795a5, type: 3}
+    speakerLine: However, missing the notes will deduct points. If you miss too many,
+      the passengers may get angry.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 28c0e592edd05bd4cb4cb7e9ec242cf0, type: 3}
+    speakerLine: If you fail to satisfy the passengers, you will be kicked out of
+      the jeep.
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  - speakerName: Tutorial
+    speakerPortrait: {fileID: 21300000, guid: 28c0e592edd05bd4cb4cb7e9ec242cf0, type: 3}
+    speakerLine: Do your best to perform well. Get ready!
+    voiceSound: {fileID: 0}
+    voicePitch: 1
+  typingSpeed: 0.02
+  autoProgressDelay: 1.5
+  dialogueType: 0
