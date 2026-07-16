@@ -1,0 +1,965 @@
+{
+  "bpm": 151.99908088235293,
+  "notes": [
+    {
+      "time": 0.0,
+      "type": "Don"
+    },
+    {
+      "time": 0.395,
+      "type": "Don"
+    },
+    {
+      "time": 0.691,
+      "type": "Don"
+    },
+    {
+      "time": 0.987,
+      "type": "Don"
+    },
+    {
+      "time": 1.184,
+      "type": "Ka"
+    },
+    {
+      "time": 1.579,
+      "type": "Don"
+    },
+    {
+      "time": 2.171,
+      "type": "Ka"
+    },
+    {
+      "time": 2.27,
+      "type": "Don"
+    },
+    {
+      "time": 2.566,
+      "type": "Ka"
+    },
+    {
+      "time": 2.763,
+      "type": "Ka"
+    },
+    {
+      "time": 3.158,
+      "type": "Ka"
+    },
+    {
+      "time": 3.553,
+      "type": "Don"
+    },
+    {
+      "time": 3.947,
+      "type": "Ka"
+    },
+    {
+      "time": 4.243,
+      "type": "Ka"
+    },
+    {
+      "time": 4.342,
+      "type": "Ka"
+    },
+    {
+      "time": 4.737,
+      "type": "Don"
+    },
+    {
+      "time": 5.033,
+      "type": "Don"
+    },
+    {
+      "time": 5.428,
+      "type": "Ka"
+    },
+    {
+      "time": 5.526,
+      "type": "Don"
+    },
+    {
+      "time": 5.822,
+      "type": "Don"
+    },
+    {
+      "time": 6.02,
+      "type": "Ka"
+    },
+    {
+      "time": 6.217,
+      "type": "Don"
+    },
+    {
+      "time": 6.415,
+      "type": "Don"
+    },
+    {
+      "time": 6.809,
+      "type": "Ka"
+    },
+    {
+      "time": 7.105,
+      "type": "Ka"
+    },
+    {
+      "time": 7.401,
+      "type": "Don"
+    },
+    {
+      "time": 7.599,
+      "type": "Ka"
+    },
+    {
+      "time": 7.796,
+      "type": "Don"
+    },
+    {
+      "time": 7.993,
+      "type": "Don"
+    },
+    {
+      "time": 8.388,
+      "type": "Ka"
+    },
+    {
+      "time": 8.586,
+      "type": "Don"
+    },
+    {
+      "time": 8.684,
+      "type": "Don"
+    },
+    {
+      "time": 8.98,
+      "type": "Don"
+    },
+    {
+      "time": 9.178,
+      "type": "Ka"
+    },
+    {
+      "time": 9.572,
+      "type": "Don"
+    },
+    {
+      "time": 9.967,
+      "type": "Ka"
+    },
+    {
+      "time": 10.263,
+      "type": "Ka"
+    },
+    {
+      "time": 10.362,
+      "type": "Ka"
+    },
+    {
+      "time": 10.559,
+      "type": "Don"
+    },
+    {
+      "time": 10.757,
+      "type": "Ka"
+    },
+    {
+      "time": 10.954,
+      "type": "Don"
+    },
+    {
+      "time": 11.151,
+      "type": "Don"
+    },
+    {
+      "time": 11.546,
+      "type": "Ka"
+    },
+    {
+      "time": 11.842,
+      "type": "Don"
+    },
+    {
+      "time": 11.842,
+      "type": "Don"
+    },
+    {
+      "time": 12.04,
+      "type": "Don"
+    },
+    {
+      "time": 12.138,
+      "type": "Don"
+    },
+    {
+      "time": 12.336,
+      "type": "Ka"
+    },
+    {
+      "time": 12.829,
+      "type": "Ka"
+    },
+    {
+      "time": 13.224,
+      "type": "Ka"
+    },
+    {
+      "time": 13.52,
+      "type": "Don"
+    },
+    {
+      "time": 13.619,
+      "type": "Ka"
+    },
+    {
+      "time": 13.717,
+      "type": "Don"
+    },
+    {
+      "time": 14.013,
+      "type": "Ka"
+    },
+    {
+      "time": 14.211,
+      "type": "Ka"
+    },
+    {
+      "time": 14.408,
+      "type": "Ka"
+    },
+    {
+      "time": 14.605,
+      "type": "Don"
+    },
+    {
+      "time": 14.803,
+      "type": "Ka"
+    },
+    {
+      "time": 15.0,
+      "type": "Don"
+    },
+    {
+      "time": 15.099,
+      "type": "Don"
+    },
+    {
+      "time": 15.197,
+      "type": "Ka"
+    },
+    {
+      "time": 15.395,
+      "type": "Don"
+    },
+    {
+      "time": 15.592,
+      "type": "Ka"
+    },
+    {
+      "time": 15.987,
+      "type": "Ka"
+    },
+    {
+      "time": 16.184,
+      "type": "Ka"
+    },
+    {
+      "time": 16.382,
+      "type": "Ka"
+    },
+    {
+      "time": 16.579,
+      "type": "Ka"
+    },
+    {
+      "time": 16.678,
+      "type": "Don"
+    },
+    {
+      "time": 16.776,
+      "type": "Ka"
+    },
+    {
+      "time": 16.974,
+      "type": "Don"
+    },
+    {
+      "time": 17.171,
+      "type": "Ka"
+    },
+    {
+      "time": 17.369,
+      "type": "Ka"
+    },
+    {
+      "time": 17.566,
+      "type": "Ka"
+    },
+    {
+      "time": 17.763,
+      "type": "Ka"
+    },
+    {
+      "time": 17.862,
+      "type": "Ka"
+    },
+    {
+      "time": 17.961,
+      "type": "Ka"
+    },
+    {
+      "time": 18.158,
+      "type": "Ka"
+    },
+    {
+      "time": 18.158,
+      "type": "Ka"
+    },
+    {
+      "time": 18.257,
+      "type": "Don"
+    },
+    {
+      "time": 18.553,
+      "type": "Ka"
+    },
+    {
+      "time": 18.849,
+      "type": "Ka"
+    },
+    {
+      "time": 18.947,
+      "type": "Ka"
+    },
+    {
+      "time": 18.947,
+      "type": "Ka"
+    },
+    {
+      "time": 19.145,
+      "type": "Ka"
+    },
+    {
+      "time": 19.342,
+      "type": "Ka"
+    },
+    {
+      "time": 19.737,
+      "type": "Ka"
+    },
+    {
+      "time": 20.23,
+      "type": "Don"
+    },
+    {
+      "time": 20.625,
+      "type": "Don"
+    },
+    {
+      "time": 21.02,
+      "type": "Don"
+    },
+    {
+      "time": 21.217,
+      "type": "Don"
+    },
+    {
+      "time": 21.415,
+      "type": "Ka"
+    },
+    {
+      "time": 21.711,
+      "type": "Ka"
+    },
+    {
+      "time": 21.809,
+      "type": "Don"
+    },
+    {
+      "time": 22.105,
+      "type": "Don"
+    },
+    {
+      "time": 22.599,
+      "type": "Don"
+    },
+    {
+      "time": 22.796,
+      "type": "Ka"
+    },
+    {
+      "time": 22.994,
+      "type": "Don"
+    },
+    {
+      "time": 23.191,
+      "type": "Ka"
+    },
+    {
+      "time": 23.388,
+      "type": "Don"
+    },
+    {
+      "time": 23.586,
+      "type": "Ka"
+    },
+    {
+      "time": 23.783,
+      "type": "Don"
+    },
+    {
+      "time": 23.98,
+      "type": "Ka"
+    },
+    {
+      "time": 24.178,
+      "type": "Ka"
+    },
+    {
+      "time": 24.375,
+      "type": "Ka"
+    },
+    {
+      "time": 24.573,
+      "type": "Ka"
+    },
+    {
+      "time": 24.869,
+      "type": "Ka"
+    },
+    {
+      "time": 25.263,
+      "type": "Ka"
+    },
+    {
+      "time": 25.559,
+      "type": "Ka"
+    },
+    {
+      "time": 26.053,
+      "type": "Ka"
+    },
+    {
+      "time": 26.25,
+      "type": "Ka"
+    },
+    {
+      "time": 26.448,
+      "type": "Don"
+    },
+    {
+      "time": 26.645,
+      "type": "Ka"
+    },
+    {
+      "time": 26.744,
+      "type": "Ka"
+    },
+    {
+      "time": 27.04,
+      "type": "Don"
+    },
+    {
+      "time": 27.237,
+      "type": "Don"
+    },
+    {
+      "time": 27.434,
+      "type": "Don"
+    },
+    {
+      "time": 27.632,
+      "type": "Ka"
+    },
+    {
+      "time": 27.928,
+      "type": "Don"
+    },
+    {
+      "time": 28.224,
+      "type": "Don"
+    },
+    {
+      "time": 28.421,
+      "type": "Ka"
+    },
+    {
+      "time": 28.816,
+      "type": "Don"
+    },
+    {
+      "time": 29.211,
+      "type": "Ka"
+    },
+    {
+      "time": 29.507,
+      "type": "Don"
+    },
+    {
+      "time": 29.605,
+      "type": "Don"
+    },
+    {
+      "time": 29.704,
+      "type": "Don"
+    },
+    {
+      "time": 30.0,
+      "type": "Ka"
+    },
+    {
+      "time": 30.198,
+      "type": "Don"
+    },
+    {
+      "time": 30.395,
+      "type": "Don"
+    },
+    {
+      "time": 30.592,
+      "type": "Don"
+    },
+    {
+      "time": 30.79,
+      "type": "Ka"
+    },
+    {
+      "time": 30.987,
+      "type": "Don"
+    },
+    {
+      "time": 31.086,
+      "type": "Don"
+    },
+    {
+      "time": 31.184,
+      "type": "Ka"
+    },
+    {
+      "time": 31.382,
+      "type": "Don"
+    },
+    {
+      "time": 31.579,
+      "type": "Ka"
+    },
+    {
+      "time": 31.974,
+      "type": "Don"
+    },
+    {
+      "time": 32.369,
+      "type": "Ka"
+    },
+    {
+      "time": 32.665,
+      "type": "Don"
+    },
+    {
+      "time": 32.763,
+      "type": "Don"
+    },
+    {
+      "time": 32.961,
+      "type": "Don"
+    },
+    {
+      "time": 33.158,
+      "type": "Ka"
+    },
+    {
+      "time": 33.355,
+      "type": "Don"
+    },
+    {
+      "time": 33.553,
+      "type": "Don"
+    },
+    {
+      "time": 33.849,
+      "type": "Don"
+    },
+    {
+      "time": 33.948,
+      "type": "Ka"
+    },
+    {
+      "time": 34.342,
+      "type": "Don"
+    },
+    {
+      "time": 34.54,
+      "type": "Don"
+    },
+    {
+      "time": 34.836,
+      "type": "Ka"
+    },
+    {
+      "time": 35.132,
+      "type": "Don"
+    },
+    {
+      "time": 35.625,
+      "type": "Ka"
+    },
+    {
+      "time": 35.921,
+      "type": "Don"
+    },
+    {
+      "time": 36.119,
+      "type": "Don"
+    },
+    {
+      "time": 36.415,
+      "type": "Ka"
+    },
+    {
+      "time": 36.612,
+      "type": "Don"
+    },
+    {
+      "time": 36.809,
+      "type": "Don"
+    },
+    {
+      "time": 37.007,
+      "type": "Don"
+    },
+    {
+      "time": 37.204,
+      "type": "Ka"
+    },
+    {
+      "time": 37.402,
+      "type": "Don"
+    },
+    {
+      "time": 37.5,
+      "type": "Don"
+    },
+    {
+      "time": 37.796,
+      "type": "Don"
+    },
+    {
+      "time": 37.994,
+      "type": "Ka"
+    },
+    {
+      "time": 38.388,
+      "type": "Don"
+    },
+    {
+      "time": 38.783,
+      "type": "Don"
+    },
+    {
+      "time": 39.178,
+      "type": "Don"
+    },
+    {
+      "time": 39.573,
+      "type": "Don"
+    },
+    {
+      "time": 39.967,
+      "type": "Ka"
+    },
+    {
+      "time": 40.165,
+      "type": "Don"
+    },
+    {
+      "time": 40.362,
+      "type": "Don"
+    },
+    {
+      "time": 40.658,
+      "type": "Don"
+    },
+    {
+      "time": 41.053,
+      "type": "Don"
+    },
+    {
+      "time": 41.349,
+      "type": "Don"
+    },
+    {
+      "time": 41.546,
+      "type": "Ka"
+    },
+    {
+      "time": 41.842,
+      "type": "Don"
+    },
+    {
+      "time": 42.04,
+      "type": "Ka"
+    },
+    {
+      "time": 42.237,
+      "type": "Don"
+    },
+    {
+      "time": 42.434,
+      "type": "Ka"
+    },
+    {
+      "time": 42.632,
+      "type": "Don"
+    },
+    {
+      "time": 42.829,
+      "type": "Ka"
+    },
+    {
+      "time": 43.027,
+      "type": "Don"
+    },
+    {
+      "time": 43.224,
+      "type": "Ka"
+    },
+    {
+      "time": 43.421,
+      "type": "Ka"
+    },
+    {
+      "time": 43.619,
+      "type": "Ka"
+    },
+    {
+      "time": 43.816,
+      "type": "Ka"
+    },
+    {
+      "time": 44.112,
+      "type": "Ka"
+    },
+    {
+      "time": 44.507,
+      "type": "Ka"
+    },
+    {
+      "time": 44.803,
+      "type": "Don"
+    },
+    {
+      "time": 45.198,
+      "type": "Ka"
+    },
+    {
+      "time": 45.494,
+      "type": "Don"
+    },
+    {
+      "time": 45.592,
+      "type": "Don"
+    },
+    {
+      "time": 45.79,
+      "type": "Don"
+    },
+    {
+      "time": 45.987,
+      "type": "Ka"
+    },
+    {
+      "time": 46.184,
+      "type": "Ka"
+    },
+    {
+      "time": 46.382,
+      "type": "Don"
+    },
+    {
+      "time": 46.579,
+      "type": "Don"
+    },
+    {
+      "time": 46.777,
+      "type": "Ka"
+    },
+    {
+      "time": 47.073,
+      "type": "Don"
+    },
+    {
+      "time": 47.171,
+      "type": "Don"
+    },
+    {
+      "time": 47.369,
+      "type": "Don"
+    },
+    {
+      "time": 47.566,
+      "type": "Ka"
+    },
+    {
+      "time": 47.763,
+      "type": "Ka"
+    },
+    {
+      "time": 47.961,
+      "type": "Don"
+    },
+    {
+      "time": 48.356,
+      "type": "Ka"
+    },
+    {
+      "time": 48.652,
+      "type": "Don"
+    },
+    {
+      "time": 48.948,
+      "type": "Don"
+    },
+    {
+      "time": 49.244,
+      "type": "Ka"
+    },
+    {
+      "time": 49.342,
+      "type": "Don"
+    },
+    {
+      "time": 49.638,
+      "type": "Don"
+    },
+    {
+      "time": 49.836,
+      "type": "Don"
+    },
+    {
+      "time": 50.033,
+      "type": "Ka"
+    },
+    {
+      "time": 50.132,
+      "type": "Don"
+    },
+    {
+      "time": 50.329,
+      "type": "Don"
+    },
+    {
+      "time": 50.527,
+      "type": "Ka"
+    },
+    {
+      "time": 50.823,
+      "type": "Ka"
+    },
+    {
+      "time": 50.921,
+      "type": "Ka"
+    },
+    {
+      "time": 51.217,
+      "type": "Don"
+    },
+    {
+      "time": 51.612,
+      "type": "Ka"
+    },
+    {
+      "time": 51.908,
+      "type": "Ka"
+    },
+    {
+      "time": 52.204,
+      "type": "Don"
+    },
+    {
+      "time": 52.402,
+      "type": "Ka"
+    },
+    {
+      "time": 52.599,
+      "type": "Don"
+    },
+    {
+      "time": 52.796,
+      "type": "Ka"
+    },
+    {
+      "time": 52.994,
+      "type": "Don"
+    },
+    {
+      "time": 53.191,
+      "type": "Ka"
+    },
+    {
+      "time": 53.487,
+      "type": "Don"
+    },
+    {
+      "time": 53.783,
+      "type": "Don"
+    },
+    {
+      "time": 53.981,
+      "type": "Ka"
+    },
+    {
+      "time": 54.178,
+      "type": "Ka"
+    },
+    {
+      "time": 54.375,
+      "type": "Ka"
+    },
+    {
+      "time": 54.77,
+      "type": "Ka"
+    },
+    {
+      "time": 55.066,
+      "type": "Don"
+    },
+    {
+      "time": 55.362,
+      "type": "Ka"
+    },
+    {
+      "time": 55.658,
+      "type": "Ka"
+    },
+    {
+      "time": 55.757,
+      "type": "Don"
+    },
+    {
+      "time": 56.053,
+      "type": "Ka"
+    },
+    {
+      "time": 56.152,
+      "type": "Don"
+    },
+    {
+      "time": 56.448,
+      "type": "Ka"
+    },
+    {
+      "time": 56.744,
+      "type": "Don"
+    },
+    {
+      "time": 56.941,
+      "type": "Ka"
+    },
+    {
+      "time": 57.237,
+      "type": "Ka"
+    },
+    {
+      "time": 57.336,
+      "type": "Ka"
+    }
+  ]
+}

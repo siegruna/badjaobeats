@@ -16,15 +16,18 @@ MonoBehaviour:
   - speakerName: Office Worker Lady
     speakerPortrait: {fileID: 0}
     speakerLine: Ang galing, kuya! Nakakawala naman ng pagod galing trabaho yung
-      kanta mo. Eto oh, keep it up!
-    voiceSound: {fileID: 0}
-    voicePitch: 0
+      kanta mo!
+  - speakerName: 
+    speakerPortrait: {fileID: 0}
+    speakerLine: The lady hands you enough money to afford a few meals because of
+      your performance.
+  - speakerName: Office Worker Lady
+    speakerPortrait: {fileID: 0}
+    speakerLine: Eto oh, keep it up
   - speakerName: You
     speakerPortrait: {fileID: 0}
     speakerLine: Salamat po, ate. Pandagdag lang po sana sa tuition fee ng nakababata
       kong kapatid para hindi matigil sa pag-aaral.
-    voiceSound: {fileID: 0}
-    voicePitch: 0
-  typingSpeed: 0.05
+  typingSpeed: 0.02
   autoProgressDelay: 1.5
-  dialogueType: 0
+  dialogueType: 3

@@ -220,6 +220,7 @@ public class GameManager : MonoBehaviour
         }
         else if (currentScore < milestones[1])
         {
+            angryFlag = false;
             passenger1.sprite = availablePassengers[passenger1Index].expressions[1];
             passenger2.sprite = availablePassengers[passenger2Index].expressions[1];
             passenger3.sprite = availablePassengers[passenger3Index].expressions[1];

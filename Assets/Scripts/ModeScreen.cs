@@ -12,7 +12,7 @@ public class ModeScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("FreeplayUnlocked", 1) == 1)
+        if (PlayerPrefs.GetInt("FreeplayUnlocked", 0) == 1)
         {
             freeplayButton.interactable = true;
         }

@@ -28,9 +28,9 @@ public class SelectScreen : MonoBehaviour
         selectedSongIndex = mostRecent[^1] - 1 - '0';
 
         StartCoroutine(ScreenFader.Instance.FadeIn());
-        selectButton.GetComponent<Image>().sprite = songPreviews[0].placard;
-        audioSource.clip = songPreviews[0].clipPreview;
-        SetDifficulty(songPreviews[0].difficulty);
+        selectButton.GetComponent<Image>().sprite = songPreviews[selectedSongIndex].placard;
+        audioSource.clip = songPreviews[selectedSongIndex].clipPreview;
+        SetDifficulty(songPreviews[selectedSongIndex].difficulty);
 
         audioSource.Play();
     }

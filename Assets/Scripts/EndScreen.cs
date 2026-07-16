@@ -21,9 +21,6 @@ public class EndScreen : MonoBehaviour
     private RectTransform buttonPanel;
 
     [SerializeField]
-    private Button creditsButton;
-
-    [SerializeField]
     private Sprite badEndingSprite;
 
     [SerializeField]
@@ -48,7 +45,6 @@ public class EndScreen : MonoBehaviour
             endingTitle.text = badEndingTitle;
             endingDescription.text = badEndingDescription;
 
-            creditsButton.gameObject.SetActive(false);
             buttonPanel.gameObject.SetActive(true);
         }
         else if (PlayerPrefs.GetInt("Ending", 0) == 1) // Good End
@@ -57,8 +53,9 @@ public class EndScreen : MonoBehaviour
             endingTitle.text = goodEndingTitle;
             endingDescription.text = goodEndingDescription;
 
-            creditsButton.gameObject.SetActive(true);
             buttonPanel.gameObject.SetActive(false);
+
+            StartCoroutine(TransitionToCredits());
         }
 
         ScreenFader.Instance.StartCoroutine(ScreenFader.Instance.FadeIn());
@@ -73,5 +70,12 @@ public class EndScreen : MonoBehaviour
     public void GiveUp()
     {
         StartCoroutine(ScreenFader.Instance.FadeOut("MainMenu"));
+    }
+
+    private IEnumerator TransitionToCredits()
+    {
+        PlayerPrefs.SetInt("FreeplayUnlocked", 1);
+        yield return new WaitForSeconds(5f);
+        yield return ScreenFader.Instance.FadeOut("Dialouge");
     }
 }

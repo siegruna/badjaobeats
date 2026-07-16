@@ -3118,7 +3118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1432527860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3133,10 +3133,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 260346767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 96.6957, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 78.347855, y: -76.525}
+  m_SizeDelta: {x: 96.6957, y: 93.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432527861
 MonoBehaviour:
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 758dc1df29f606b46a82372d8e659f8d, type: 2}
   - {fileID: 11400000, guid: 77ddcf65ab1cc8f4188bd20b257ad1d6, type: 2}
   - {fileID: 11400000, guid: db32dd986225f8544b635d1d162f15d4, type: 2}
-  milestones: e8030000d0070000
+  milestones: dc050000b80b0000
   dialogues:
   - {fileID: 11400000, guid: 23faa7ec5a5dd974fb5468e657067b10, type: 2}
   - {fileID: 11400000, guid: fe7d6213bba779048a6736c4aef43df3, type: 2}
